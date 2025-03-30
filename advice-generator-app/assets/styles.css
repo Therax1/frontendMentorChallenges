@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(218, 23%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Manroe", sans-serif;
+}
+
+div.quote-card{
+    background-color: hsl(217, 19%, 24%);
+    padding: 40px 30px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 12.5em;
+    max-width: 40em;
+    margin: 30px 20px;
+    max-height: 100%;
+}
+
+div.content{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 30px;
+
+}
+
+p.title{
+    color: hsl(150, 100%, 66%);
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+}   
+
+p.quotes{
+    font-size: clamp(10px, 5vw, 30px);
+    font-weight: 800;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.author{
+    font-size: clamp(10px, 5vw, 30px);
+    font-weight: 600;
+    color: hsl(193, 38%, 86%);
+}
+
+div.underlined img{
+    max-width: 100%;
+}
+
+.generated-btn{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    background-color: hsl(150, 100%, 66%);
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.generated-btn img{
+    max-width: 100%;
+}
+
+.generated-btn:hover{
+    -webkit-box-shadow: 0px 0px 62px 0px rgba(82,255,168,1);
+    -moz-box-shadow: 0px 0px 62px 0px rgba(82,255,168,1);
+    box-shadow: 0px 0px 62px 0px rgba(82,255,168,1);
+}
