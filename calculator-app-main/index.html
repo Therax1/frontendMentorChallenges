@@ -6,18 +6,69 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Calculator app</title>
-
+  <title>Frontend Mentor | Calculator app</title
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+  <link rel="stylesheet" href="./assets/styles.css">
 <body>
-
-
-  
-  
+    <div class="container">
+      <div class="calculator">
+        <div class="up">
+          <div class="brand-name">
+            <h4 class="calculator-title">calc</h4>
+          </div>
+          <div class="theme-selection">
+            <p class="theme-title">THEME</p>
+            <div class="theme-selector">
+              <!-- <div class="level">
+                <span class="theme1">1</span>
+                <span class="theme2">2</span>
+                <span class="theme3">3</span>
+              </div> -->
+              <button class="theme-changing">
+                CHANGE
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="screen">
+          <span class="screen-display">
+            399,981
+          </span>
+        </div>
+        <div class="numberpOp">
+          <div class="buttons">
+            <div class="navigation-part part1">
+              <button class="button num7">7</button>
+              <button class="button num8">8</button>
+              <button class="button num9">9</button>
+              <button class="button green delete">DEL</button>
+            </div>
+            <div class="navigation-part part2">
+              <button class="button num4">4</button>
+              <button class="button num5">5</button>
+              <button class="button num6">6</button>
+              <button class="button plus">+</button>
+            </div>
+            <div class="navigation-part part3">
+              <button class="button num1">1</button>
+              <button class="button num2">2</button>
+              <button class="button num4">3</button>
+              <button class="button substraction">-</button>
+            </div>
+            <div class="navigation-part part4">
+              <button class="button dot">.</button>
+              <button class="button num0">0</button>
+              <button class="button division">/</button>
+              <button class="button time">x</button>
+            </div>
+            <div class="part5">
+                <button class="button green reset">RESET</button>
+                <button class="button equal">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

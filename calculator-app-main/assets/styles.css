@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* CSS Variables  */
+
+:root{
+    --numbersize: 32px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 90%);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator-title{
+    font-size: 23px;
+}
+
+.theme-title{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.theme-selection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+button.theme-changing{
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #424242;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.level{
+    display: flex;
+    justify-content: space-between;
+}
+
+.screen{
+    /* text-align: right; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: hsl(0, 0%, 93%);
+    padding: 30px 25px;
+}
+.screen-display{
+    font-size: 53px;
+    font-weight: 600;
+}
+
+.numberpOp{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: hsl(0, 5%, 81%);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation-part{
+    display: flex;
+    gap: 20px;
+}
+.part5{
+    display: flex;
+    gap: 20px;
+}
+.button {
+    font-size: var(--numbersize);
+    font-weight: 700;
+    height: 1.8em;
+    width: 3.1em;
+    border: none;
+    box-shadow: 0 2px 1px hsl(35, 11%, 61%) ;
+    border-radius: 10px;
+    flex-grow: 1;
+    background-color: hsl(45, 7%, 89%);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.green{
+    background-color: hsl(185, 42%, 37%);
+    color: #FFF;
+    box-shadow: 0 2px 1px hsl(185, 58%, 25%);
+}
+
+.equal{
+    background-color: hsl(25, 98%, 40%);
+    color: #FFF;
+    box-shadow: 0 2px 1px hsl(25, 99%, 27%);
+}
