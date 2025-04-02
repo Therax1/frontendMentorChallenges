@@ -74,10 +74,12 @@ button.theme-changing{
     align-items: center;
     background-color: hsl(0, 0%, 93%);
     padding: 30px 25px;
+    overflow-x: scroll;
 }
 .screen-display{
     font-size: 53px;
     font-weight: 600;
+    
 }
 
 .numberpOp{
