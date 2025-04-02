@@ -9,28 +9,28 @@ buttons.forEach(button => {
         const value = button.textContent;
         screen.textContent += value
     })
-})
+});
 
 reset.addEventListener("click",  ()=>{
     screen.textContent = "";
-})
+});
 
 deleted.addEventListener("click", ()=>{
     screen.textContent = screen.textContent.slice(0, -1)
-})
+});
 
 equal.addEventListener("click", ()=>{
    try{
-    let result = eval(screen.textContent);
-    if(result == Infinity || result == undefined || isNaN(result)){
-        screen.textContent = "Impossible";
-    }else{
-        screen.textContent = result;
-    }
+        let result = eval(screen.textContent);
+        if(result == Infinity || result == undefined || isNaN(result)){
+            screen.textContent = "Impossible";
+        }else{
+            screen.textContent = result;
+        }
    } catch{
-    screen.textContent = "Erreur"
+        screen.textContent = "Erreur"
    }
-})
+});
 
 
 

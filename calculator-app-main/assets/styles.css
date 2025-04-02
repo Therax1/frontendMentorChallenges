@@ -14,9 +14,6 @@
 }
 body{
     background-color: hsl(0, 0%, 90%);
-}
-
-.container{
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -24,12 +21,15 @@ body{
     font-family: "League Spartan", sans-serif;
 }
 
+
 .calculator{
     display: flex;
     flex-direction: column;
     gap: 20px;
     /* border: 1px solid red; */
     padding: 10px;
+    min-width: 100%;
+    max-width: 516px;
 }
 
 .up{
@@ -46,12 +46,7 @@ body{
     font-weight: 500;
 }
 
-.theme-selection{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 25%;
-}
+
 
 button.theme-changing{
     border: none;
@@ -60,6 +55,7 @@ button.theme-changing{
     background-color: #424242;
     cursor: pointer;
     color: #FFF;
+    
 }
 
 .level{
@@ -75,11 +71,11 @@ button.theme-changing{
     background-color: hsl(0, 0%, 93%);
     padding: 30px 25px;
     overflow-x: scroll;
+    min-height: 109px;
 }
 .screen-display{
-    font-size: 53px;
+    font-size: 3.3em;
     font-weight: 600;
-    
 }
 
 .numberpOp{
@@ -129,4 +125,23 @@ button.theme-changing{
     background-color: hsl(25, 98%, 40%);
     color: #FFF;
     box-shadow: 0 2px 1px hsl(25, 99%, 27%);
+}
+
+
+@media (max-width: 512px) {
+    .container{
+        width: 87%;
+    }
+}
+@media (max-width: 382px) {
+    .container{
+        width: 100%;
+        padding: 5px;
+    }
+    .up{
+        justify-content: space-around;
+    }
+    .theme-selection{
+        width: 55%;
+    }
 }
