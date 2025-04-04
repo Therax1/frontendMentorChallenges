@@ -9,49 +9,43 @@
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
   <div class="container">
     <div class="navbar">
       <div class="logo">
-        <img src="" alt="">
+        <img src="./assets/images/logo.svg" alt="">
       </div>
-      <div class="navlinks">
-        <ul class="navlinks">
-          <li class="navlink navlink1">
-            <a href="#">Home</a>
-          </li>
-          <li class="navlink navlink2">
-            <a href="#">New</a>
-          </li>
-          <li class="navlink navlink3">
-            <a href="#">Popular</a>
-          </li>
-          <li class="navlink navlink4">
-            <a href="#">Trending</a>
-          </li>
-          <li class="navlink navlink5">
-            <a href="#">Categories</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="navlinks">
+        <li class="navlink navlink1">
+          <a href="#">Home</a>
+        </li>
+        <li class="navlink navlink2">
+          <a href="#">New</a>
+        </li>
+        <li class="navlink navlink3">
+          <a href="#">Popular</a>
+        </li>
+        <li class="navlink navlink4">
+          <a href="#">Trending</a>
+        </li>
+        <li class="navlink navlink5">
+          <a href="#">Categories</a>
+        </li>
+      </ul>
     </div>
-    <div class="content">
       <div class="content-1">
         <div class="content1-img">
-          <img src="./assets/images/image-web-3-desktop.jpg" alt="">
+          <img class="largest" src="./assets/images/image-web-3-desktop.jpg" alt="">
         </div>
         <div class="content1-description">
-          <div class="content1-title">
+          <div class="content1-description-el content1-title">
             <h2 class="content1-title">
               The Bright Future of Web 3.0?
             </h2>
           </div>
-          <div class="content1-desc">
+          <div class="content1-description-el content1-desc">
             <p class="content1-desc">
               We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
               But is it really fulfilling its promise?
@@ -62,45 +56,45 @@
           </div>
         </div>
       </div>
-      <div class="content-2">
-        <div class="content2-title">
-          <h2 class="content2-title">
-            New 
-          </h2>
-        </div>
-        <div class="content2-desc">
-          <div class="content2-desc1">
-            <h4 class="content2-desc1-title">
-              Hydrogen VS Electric Cars
-            </h4>
-            <p class="content2-desc1-desc">
-              Will hydrogen-fueled cars ever catch up to EVs?
-            </p>
+        <div class="content-2">
+          <div class="content2-title">
+            <h2 class="content2-title">
+              New 
+            </h2>
           </div>
-          <div class="content2-desc2">
-            <h4 class="content2-desc2-title">
-              The Downsides of AI Artistry
-            </h4>
-            <p class="content2-desc2-desc">
-              What are the possible adverse effects of on-demand AI image generation?
-            </p>
-          </div>
-          <div class="content2-desc3">
-            <h4 class="content2-desc3-title">
-              Is VC Funding Drying Up?
-            </h4>
-            <p class="content2-desc3-desc">
-              Private funding by VC firms is down 50% YOY. We take a look at what that means.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="down">
-        <div class="content-3">
-          <div id="content-3">
-            <div class="content3-1-img">
-              <img src="./assets/images/image-retro-pcs.jpg" alt="">
+          <div class="content2-desc">
+            <div class="content2-desc1">
+              <h4 class="content2-desc1-title">
+                Hydrogen VS Electric Cars
+              </h4>
+              <p class="content2-desc1-desc">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
             </div>
+            <div class="content2-desc2">
+              <h4 class="content2-desc2-title">
+                The Downsides of AI Artistry
+              </h4>
+              <p class="content2-desc2-desc">
+                What are the possible adverse effects of on-demand AI image generation?
+              </p>
+            </div>
+            <div class="content2-desc3">
+              <h4 class="content2-desc3-title">
+                Is VC Funding Drying Up?
+              </h4>
+              <p class="content2-desc3-desc">
+                Private funding by VC firms is down 50% YOY. We take a look at what that means.
+              </p>
+            </div>
+          </div>
+        </div>
+      <div class="down">
+        <div class="down-el content-3">
+          <div class="content3-1-img">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="">
+          </div>
+          <div class="down-contents-descs">
             <h4 class="content3-1-number">
               01
             </h4>
@@ -112,11 +106,11 @@
             </p>
           </div>
         </div>
-        <div class="content-4">
-          <div id="content-4">
-            <div class="content4-2-img">
-              <img src="./assets/images/image-top-laptops.jpg" alt="">
-            </div>
+        <div class="down-el content-4">
+          <div class="content4-2-img">
+            <img src="./assets/images/image-top-laptops.jpg" alt="">
+          </div>
+          <div class="down-contents-descs">
             <h4 class="content4-2-number">
               02
             </h4>
@@ -128,11 +122,11 @@
             </p>
           </div>
         </div>
-        <div class="content-5">
-          <div id="content-5">
-            <div class="content5-3-img">
-              <img src="./assets/images/image-gaming-growth.jpg" alt="">
-            </div>
+        <div class="down-el content-5">
+          <div class="content5-3-img">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="">
+          </div>
+          <div class="down-contents-descs">
             <h4 class="content5-3-number">
               03
             </h4>
@@ -145,7 +139,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </body>
 </html>
