@@ -10,41 +10,47 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
    <link rel="stylesheet" href="./assets /styles.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
 </head>
 <body>
   <div class="container">
     <div class="up">
-      <div class="title">
+      <h2 class="title">
         IP Address Tracker
-      </div>
+      </h2>
       <div class="search-bar">
         <input type="search" name="search-bar" id="searchbar" placeholder="Search for any IP address or domain">
-        <button>
+        <button class="search">
           <img src="./images/icon-arrow.svg" alt="">
         </button>
       </div>
-      <div class="ip-informations-el">
-        <div class="ip-informations-el ipadress">
+      <div class="ip-informations">
+        <div class="ip-informations-el ">
           <h4 class="ip-information-title">IP Address</h4>
-          <p class="ip-information-description">192.212.174.101</p>
+          <p class="ip-information-description ip">192.212.174.101</p>
         </div>
-        <div class="ip-informations-el location">
+        <div class="ip-informations-el ">
           <h4 class="ip-information-title">Location</h4>
-          <p class="ip-information-description">Brooklyn, NY 10001</p>
+          <p class="ip-information-description location">Brooklyn, NY 10001</p>
         </div>
-        <div class="ip-informations-el timezone">
+        <div class="ip-informations-el ">
           <h4 class="ip-information-title">TimeZone</h4>
-          <p class="ip-information-description">UTC -05:00</p>
+          <p class="ip-information-description timezone">UTC -05:00</p>
         </div>
-        <div class="ip-informations-el isp">
+        <div class="ip-informations-el">
           <h4 class="ip-information-title">Isp</h4>
-          <p class="ip-information-description">SpaceX Starlink</p>
+          <p class="ip-information-description isp">SpaceX Starlink</p>
         </div>
       </div>
     </div>
     <div class="down">
-      
+      <div id="down" >
+        
+      </div>
+
     </div>
   </div>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="./assets /scripts.js" defer></script>
 </body>
 </html>
