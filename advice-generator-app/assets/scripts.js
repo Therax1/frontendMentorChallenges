@@ -18,3 +18,4 @@ button.addEventListener("click", () => {
     quotesDiv.innerHTML = selected;
     quoteNumber.innerHTML = indexgenerated + 1;
 });
+
