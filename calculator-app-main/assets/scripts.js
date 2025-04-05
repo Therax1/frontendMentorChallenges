@@ -54,22 +54,3 @@ equal.addEventListener("click", ()=>{
         screen.textContent = "Erreur"
    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
