@@ -50,7 +50,16 @@ body{
     font-weight: 700;
     font-size: 1.6em;
     color: white;
+    
 }
+
+.light-dark img {
+    transition: 0.3s;
+}
+.light-dark img:hover{
+    transform: rotate(180deg);
+}
+
 
 .middle{
     display: flex;
