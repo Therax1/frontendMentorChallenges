@@ -60,14 +60,15 @@ input.addEventListener("keydown", (e)=>{
         li.appendChild(contentContainer);
 
         // Creating the cross button to append it in the li element
-        const button = document.createElement("button")
-        button.classList.add("cross")
+        // const button = document.createElement("button")
+        // button.classList.add("cross")
         const img = document.createElement("img")
+        img.classList.add("cross")
         img.setAttribute("src", "./images/icon-cross.svg")
         img.setAttribute("alt", "Just a cross")
-        button.appendChild(img)
+        // button.appendChild(img)
         
-        li.appendChild(button)
+        li.appendChild(img)
 
         availableTodo.appendChild(li);
 
@@ -78,6 +79,17 @@ input.addEventListener("keydown", (e)=>{
 
 // Count Tasks 
 function taskCount(){
-    const taskscount = document.querySelectorAll(".todo").length
-    document.querySelector(".count").textContent = taskscount;
+    const taskcount = document.querySelectorAll(".todo").length
+    document.querySelector(".count").textContent = taskcount;
 }
+
+// Delete a task
+const container = document.querySelector(".listing-available-todo");
+
+container.addEventListener("click", function (e) {
+  if (e.target.tagName == "IMG") {
+    e.target.parentElement.remove(); // supprime le <li> parent
+    taskCount(); // mets à jour le compteur
+  }
+});
+
