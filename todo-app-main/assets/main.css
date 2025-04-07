@@ -33,7 +33,7 @@ body{
 }
 .container{
     padding: 50px 0;
-    width: 91%;
+    width: 85%;
     max-width: 25em;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ body{
     display: flex;
     align-items: center;
     height: 3.3em;
-    border: 1px solid red;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
 }
 
 .content{

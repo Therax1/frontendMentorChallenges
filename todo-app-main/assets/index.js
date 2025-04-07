@@ -32,6 +32,7 @@ circle.addEventListener("click", ()=>{
 const availableTodo = document.querySelector(".listing-available-todo")
 input.addEventListener("keydown", (e)=>{
     if(e.code == "Enter" && input.value.trim() != ""){
+        // Creating the circle to append it in the li/
         const li = document.createElement("li")
         li.classList.add("todo")
 
@@ -46,6 +47,7 @@ input.addEventListener("keydown", (e)=>{
         
         li.appendChild(todoCircle)
 
+        // Creating the task text content to append it un the li element
         const contentContainer = document.createElement("div")
         contentContainer.classList.add("content")
         
@@ -57,9 +59,25 @@ input.addEventListener("keydown", (e)=>{
         contentContainer.appendChild(content);
         li.appendChild(contentContainer);
 
+        // Creating the cross button to append it in the li element
+        const button = document.createElement("button")
+        button.classList.add("cross")
+        const img = document.createElement("img")
+        img.setAttribute("src", "./images/icon-cross.svg")
+        img.setAttribute("alt", "Just a cross")
+        button.appendChild(img)
+        
+        li.appendChild(button)
+
         availableTodo.appendChild(li);
 
         input.value = "";
+        taskCount()
     }
 })
 
+// Count Tasks 
+function taskCount(){
+    const taskscount = document.querySelectorAll(".todo").length
+    document.querySelector(".count").textContent = taskscount;
+}
