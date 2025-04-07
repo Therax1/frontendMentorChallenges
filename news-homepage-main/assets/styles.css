@@ -178,3 +178,22 @@ a.navlink{
     flex-direction: column;
     gap: 30px;
 }
+
+@media (max-width: 375px) {
+    .navlink{
+        display: none;
+    }
+    .content-1{
+        grid-column: 2 /12;
+    }
+    .content1-description{
+        flex-direction: column;
+    }
+    .content-2{
+        grid-row: 3 / 4;
+        grid-column: 2 /12;
+    }
+    .down{
+        flex-direction: column;
+    }
+}
