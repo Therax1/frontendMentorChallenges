@@ -130,7 +130,9 @@ body{
     height: 3.3em;
     border-bottom: 1px solid hsl(233, 11%, 84%);
 }
-
+.draggable{
+    display: none;
+}
 .content{
     flex-grow: 1;
 }
@@ -149,6 +151,7 @@ body{
 
 .cross{
     padding: 0 15px;
+    cursor: pointer;
 }
 
 .todo-footer{

@@ -27,7 +27,7 @@ circle.addEventListener("click", ()=>{
 
 
 
-// Keydown PRESS Enter
+// Keydown PRESS Enter && Creating Tasks 
 
 const availableTodo = document.querySelector(".listing-available-todo")
 input.addEventListener("keydown", (e)=>{
@@ -35,6 +35,7 @@ input.addEventListener("keydown", (e)=>{
         // Creating the circle to append it in the li/
         const li = document.createElement("li")
         li.classList.add("todo")
+        li.setAttribute("draggable", "true")
 
         const todoCirclContainer = document.createElement("div")
         todoCirclContainer.classList.add("todo-circle")
@@ -92,4 +93,39 @@ container.addEventListener("click", function (e) {
     taskCount(); // mets à jour le compteur
   }
 });
+
+// Drag And Drop gon kill me naa
+
+
+// let dragged = null;
+
+// document.querySelectorAll(".todo").forEach(item => {
+//   item.addEventListener("dragstart", (event) => {
+//     dragged = event.target;
+//     event.target.style.opacity = "0.5";
+//   });
+
+//   item.addEventListener("dragover", (event) => {
+//     event.preventDefault(); // autoriser le drop
+//   });
+
+//   item.addEventListener("drop", (event) => {
+//     event.preventDefault();
+//     event.target.style.opacity = "1";
+    
+//     const parent = event.target.parentNode;
+//     if (dragged !== event.target) {
+//       // Insérer dragged AVANT la cible
+//       parent.insertBefore(dragged, event.target);
+//     }
+//   });
+
+//   item.addEventListener("dragend", () => {
+//     dragged.style.opacity = "1";
+//     dragged = null;
+//   });
+// });
+
+
+
 
