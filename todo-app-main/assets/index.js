@@ -27,7 +27,7 @@ circle.addEventListener("click", ()=>{
 
 
 
-// Keydown PRESS Enter
+// Keydown PRESS Enter && Creating Tasks 
 
 const availableTodo = document.querySelector(".listing-available-todo")
 input.addEventListener("keydown", (e)=>{
@@ -35,6 +35,7 @@ input.addEventListener("keydown", (e)=>{
         // Creating the circle to append it in the li/
         const li = document.createElement("li")
         li.classList.add("todo")
+        li.setAttribute("draggable", "true")
 
         const todoCirclContainer = document.createElement("div")
         todoCirclContainer.classList.add("todo-circle")
@@ -60,14 +61,15 @@ input.addEventListener("keydown", (e)=>{
         li.appendChild(contentContainer);
 
         // Creating the cross button to append it in the li element
-        const button = document.createElement("button")
-        button.classList.add("cross")
+        // const button = document.createElement("button")
+        // button.classList.add("cross")
         const img = document.createElement("img")
+        img.classList.add("cross")
         img.setAttribute("src", "./images/icon-cross.svg")
         img.setAttribute("alt", "Just a cross")
-        button.appendChild(img)
+        // button.appendChild(img)
         
-        li.appendChild(button)
+        li.appendChild(img)
 
         availableTodo.appendChild(li);
 
@@ -78,6 +80,52 @@ input.addEventListener("keydown", (e)=>{
 
 // Count Tasks 
 function taskCount(){
-    const taskscount = document.querySelectorAll(".todo").length
-    document.querySelector(".count").textContent = taskscount;
+    const taskcount = document.querySelectorAll(".todo").length
+    document.querySelector(".count").textContent = taskcount;
 }
+
+// Delete a task
+const container = document.querySelector(".listing-available-todo");
+
+container.addEventListener("click", function (e) {
+  if (e.target.tagName == "IMG") {
+    e.target.parentElement.remove(); // supprime le <li> parent
+    taskCount(); // mets à jour le compteur
+  }
+});
+
+// Drag And Drop gon kill me naa
+
+
+// let dragged = null;
+
+// document.querySelectorAll(".todo").forEach(item => {
+//   item.addEventListener("dragstart", (event) => {
+//     dragged = event.target;
+//     event.target.style.opacity = "0.5";
+//   });
+
+//   item.addEventListener("dragover", (event) => {
+//     event.preventDefault(); // autoriser le drop
+//   });
+
+//   item.addEventListener("drop", (event) => {
+//     event.preventDefault();
+//     event.target.style.opacity = "1";
+    
+//     const parent = event.target.parentNode;
+//     if (dragged !== event.target) {
+//       // Insérer dragged AVANT la cible
+//       parent.insertBefore(dragged, event.target);
+//     }
+//   });
+
+//   item.addEventListener("dragend", () => {
+//     dragged.style.opacity = "1";
+//     dragged = null;
+//   });
+// });
+
+
+
+
