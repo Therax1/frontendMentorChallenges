@@ -196,4 +196,7 @@ a.navlink{
     .down{
         flex-direction: column;
     }
+    ul.navlinks{
+        justify-content: flex-end;
+    }
 }

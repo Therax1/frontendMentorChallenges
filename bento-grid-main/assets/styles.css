@@ -1,0 +1,67 @@
+
+
+:root{
+    --purple: hsl(256, 67%, 59%);
+    --light-purple: hsl(254, 88%, 90%);
+    --yellow: hsl(39, 100%, 71%);
+}
+
+
+@font-face {
+    font-family: "DMSans";
+    src: url(./fonts/static/DMSans-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DMSans";
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    width: 96%;
+}
+
+
+img{
+    height: 100px;
+    width: 100px;
+}
+.social-media{
+    background-color: var(--purple);
+    color: var(--light-purple);
+    width: 100%;
+    min-height: 50%;
+    border-radius: 5%;
+    text-align: center;
+    padding: 9% 9%;
+}
+
+.social-media-description{
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.ten-times{
+    color: var(--yellow);
+}
+
+.five-stars{
+    width: 100%;
+    height: auto;
+}
+
+/* Second Part */
