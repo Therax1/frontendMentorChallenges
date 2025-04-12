@@ -91,8 +91,11 @@ container.addEventListener("click", function (e) {
   if (e.target.tagName == "IMG") {
     e.target.parentElement.remove(); // supprime le <li> parent
     taskCount(); // mets à jour le compteur
+  }else if(e.target.tagName == "P"){
+    e.target.classList.toggle("checked")
   }
 });
+
 
 // Drag And Drop gon kill me naa
 
@@ -127,5 +130,4 @@ container.addEventListener("click", function (e) {
 // });
 
 
-
-
+// Task Completed
