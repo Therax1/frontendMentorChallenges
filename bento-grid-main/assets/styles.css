@@ -23,6 +23,7 @@ body {
     font-size: 18px;
     display: flex;
     justify-content: center;
+    background-color: hsl(0, 0%, 91%);
 }
 
 .container{
@@ -32,7 +33,7 @@ body {
     align-items: center;
     gap: 20px;
     height: 100vh;
-    width: 96%;
+    width: 90%;
 }
 
 
@@ -65,3 +66,64 @@ img{
 }
 
 /* Second Part */
+
+.manage-multiple-account{
+    background-color: hsl(0, 0%, 100%);
+    padding: 6% 4%;
+    border-radius: 10px;
+}
+
+.multiple-imgs{
+    width: 100%;
+    height: auto;  
+}
+
+.manage-multiple{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+/* Third part  */
+.maintain-consistant{
+    background-color: hsl(39, 100%, 71%);
+    text-align: left;
+    padding: 4% 3% 0 3%;
+    border-radius: 10px;
+}
+
+.maintain-consistant-schedule{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.maintain-consistant-img{
+    width: auto;
+}
+
+
+/* Fourth Part */
+.schedule-to{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(254, 88%, 90%);
+    padding: 6% 4%;
+    border-radius: 10px;
+}
+
+.schedule-to-social{
+    font-size: 1.2em;
+
+}
+
+.schedule-to img{
+    width: 100%;
+    height: auto;
+}
+
+.optimize-posts{
+    text-align: center;
+}
+
+/* Fifth Part */
