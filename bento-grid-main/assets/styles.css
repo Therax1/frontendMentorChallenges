@@ -4,6 +4,8 @@
     --purple: hsl(256, 67%, 59%);
     --light-purple: hsl(254, 88%, 90%);
     --yellow: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --light-yellow: hsl(31, 66%, 93%);
 }
 
 
@@ -68,7 +70,7 @@ img{
 /* Second Part */
 
 .manage-multiple-account{
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white);
     padding: 6% 4%;
     border-radius: 10px;
 }
@@ -107,7 +109,7 @@ img{
     gap: 10px;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(254, 88%, 90%);
+    background-color: var(--light-purple);
     padding: 6% 4%;
     border-radius: 10px;
 }
@@ -127,3 +129,87 @@ img{
 }
 
 /* Fifth Part */
+
+.grow-followers{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 4% 20%;
+    border-radius: 10px;
+}
+
+.grow-followers img{
+    width: 90%;
+    height: auto;
+}
+
+.grow {
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+
+/* Sixth Part  */
+
+.faster-audience-growth{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 6% 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fifty-six{
+    font-size: 2.2em;
+}
+
+.faster-audience-growth img{
+    width: 40%;
+    height: auto;
+}
+
+/* Seventh Part */
+
+.create-sched{
+    background-color: var(--light-yellow);
+    padding: 4% 6%;
+    font-weight: 600;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.create-sched img{
+    width: 50%;
+    height: auto;
+}
+
+.quicker{
+    font-style: italic;
+    color: var(--purple);
+}
+
+/* Eighth Part  */
+
+.write-your-cont{
+    background-color: var(--yellow);
+    padding: 6% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.write-your-content{
+    font-size: 1.5em;
+}
+.write-your-cont img{
+    width: 60%;
+    height: auto;
+}
