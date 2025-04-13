@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--blue-800);
+    background-color: var(--blue-700);
 }
 
 /* ========================
