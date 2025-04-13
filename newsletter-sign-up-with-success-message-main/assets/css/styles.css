@@ -1,0 +1,150 @@
+/* ========================
+   1. RESET / BASE
+======================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-800);
+}
+
+/* ========================
+   2. VARIABLES CSS && FONTS 
+======================== */
+:root {
+  --red: hsl(4, 100%, 67%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%,58%);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+/* ========================
+   3. LAYOUT
+   (Grids, containers, wrappers)
+======================== */
+form{
+    background-color: #fff;
+    display: flex;
+    border-radius: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap-reverse;
+
+}
+
+.content {
+    align-self: center;
+    padding: 0 3rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.success-msg-container {
+    padding: 3rem;
+    background-color: #fff;
+    width: 29rem;
+    height: 28rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ========================
+   4. COMPONENTS
+   (Buttons, cards, navbars, footers)
+======================== */
+
+li{
+    display: flex;
+    gap: 1rem;
+}
+
+.title{
+    font-size: 1.8em;
+}
+
+.success-title{
+    font-size: 2.8em;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 11px;
+}
+.labels{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#email{
+    padding: 1rem;
+    text-indent: 10px;
+    width: 100%;
+    border-radius: 0.2rem;
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 16px;
+}
+
+#email::placeholder{
+    font-size: 16px;
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--blue-800);
+    font-weight: 700; 
+    color: #FFF; 
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.illustration{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* ========================
+6. UTILITIES
+(Text-center, margin, padding, etc.)
+======================== */
+
+.none{
+    display: none;
+}

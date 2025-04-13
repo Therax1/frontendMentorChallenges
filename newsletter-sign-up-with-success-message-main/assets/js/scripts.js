@@ -30,20 +30,28 @@ form.addEventListener("submit", function (e) {
 // Fonction pour afficher les erreurs
 function showError(errorText) {
   message.textContent = errorText;
-  message.style.color = "red";
-  emailInput.style.backgroundColor = "#FF0000";
-  emailInput.style.border = "2px solid red";
+  message.style.color = "hsl(4, 100%, 67%)";
+  emailInput.style.backgroundColor = "";
+  emailInput.style.border = "2px solid hsl(4, 100%, 67%)";
 }
 
 // Fonction pour afficher le succès
 function showSuccess() {
-  form.setAttribute("hidden", "hidden");
-  Success.removeAttribute("hidden")
+  form.classList.toggle("none");
+  Success.classList.toggle("none");
   strong.textContent = emailInput.value;
 }
 
 dimiss.addEventListener("click", ()=>{
-    form.removeAttribute("hidden", "hidden");
-    Success.setAttribute("hidden", "hidden")
+    form.classList.toggle("none");
+    Success.classList.toggle("none");
     emailInput.value = "";
+
 })
+
+// Supprime l'erreur quand l'utilisateur recommence à taper
+emailInput.addEventListener("input", () => {
+  message.textContent = "";
+  emailInput.style.border = ""; // Supprime la bordure rouge
+});
+

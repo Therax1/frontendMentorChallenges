@@ -8,15 +8,9 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-
   <!-- Sign-up form start -->
   <form action="#" method="#"  class="container-form-start">
     <div class="content">
@@ -52,7 +46,7 @@
       </ul>
       <div class="input">
         <div class="labels">
-          <label for="email">Email address</label>
+          <label class="label" for="email">Email address</label>
           <p class="error-state"></p>
         </div>
         <input type="" name="email" id="email" placeholder="email@company.com">
@@ -70,8 +64,10 @@
 
   <!-- Success message start -->
 
-  <div hidden class="success-msg-container">
-    <img src="./assets/images/icon-success.svg" alt="">
+  <div class="success-msg-container none">
+    <div class="img">
+      <img src="./assets/images/icon-success.svg" alt="">
+    </div>
     <h2 class="success-title">Thanks for subscribing!</h2>
     <p class="success-description">
       A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
