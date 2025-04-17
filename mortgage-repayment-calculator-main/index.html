@@ -17,16 +17,16 @@
           Mortage Calculator
         </li>
         <li class="item2">
-          <a href="#">Clear All</a>
+          <a class="text500" href="#">Clear All</a>
         </li>
       </ul>
-      <div class="amount">
-        <label for="mortgage-amt">
+      <div class="amount gaps">
+        <label class="label text500" for="label mortgage-amt">
           Mortgage Amount
         </label>
         <div class="inputs input-amt">
           <input type="text" name="mortgage-amt" id="amt">
-          <div class="abs abs-right">
+          <div class="abs-right">
             <p class="">
               £
             </p>
@@ -37,8 +37,8 @@
         </p>
       </div>
       <div class="term-interest">
-        <div class="term">
-          <label for="term">
+        <div class="term gaps">
+          <label class="text500 label" for="label term">
             Mortgage Term
           </label>
           <div class="inputs input-term">
@@ -53,8 +53,8 @@
           
           </p>
         </div>
-        <div class="interest">
-          <label for="rate">
+        <div class="interest gaps">
+          <label class="label text500" for="label rate">
             Interest Rate
           </label>
           <div class="inputs input-rate">
@@ -70,20 +70,22 @@
           </p>
         </div>
       </div>
-      <div class="mort-type">
-        <label for="type-title">
+      <div class="mort-type gaps">
+        <label class="label text500" for="type-title ">
           Mortgage Type
         </label>
-        <div class="repayment">
-          <input type="radio" name="repayment" id="repayment">
+        
+        <div class="repayment option">
+          <input type="radio" name="options" id="repayment">
           <label for="repayment">Repayment</label>
         </div>
-        <div class="interest-only">
-          <input type="radio" name="interest-only" id="interest-only">
+        <div class="interest-only option">
+          <input type="radio" name="options" id="interest-only">
           <label for="interest-only">
             Interest Only
           </label>
         </div>
+        
         <p class="error-states">
           
         </p>

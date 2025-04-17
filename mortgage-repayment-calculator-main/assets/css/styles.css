@@ -48,9 +48,10 @@ body {
     font-weight: 700;
 }
 
+
 @font-face {
     font-family: "PlusJakartaSans";
-    src: url("../fonts/static/PlusJakartaSans-Medium.ttf");
+    src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf");
     font-weight: 500;
 }
 
@@ -72,6 +73,7 @@ body {
    4. COMPONENTS
    (Buttons, cards, navbars, footers)
 ======================== */
+
 .part-1{
     width: 50%;
     padding: 2.5rem;
@@ -87,14 +89,26 @@ body {
     align-items: center;
 }
 
+.text500{
+    color: var(--Slate-500);
+}
+
 .item1{
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.amount{
+    gap: 40px;
 }
 
 .inputs{
     position: relative;
     height: 3rem;
     overflow: hidden;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
 }
 
 .inputs input{
@@ -102,6 +116,7 @@ body {
     width: 100%;
     border: 1px solid var(--Slate-700);
     border-radius: 0.3rem;
+    outline: none;
 }
 
 
@@ -134,10 +149,22 @@ div.interest{
 
 
 .description{
-    font-family: "";
-    font-weight: 500;
+    color: var(--Slate-300);
 }
 
+
+.calculate{
+    align-self: flex-start;
+    background-color: var(--Lime);
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    gap: 1rem;
+}
 /* ========================
 6. UTILITIES
 (Text-center, margin, padding, etc.)
@@ -153,13 +180,46 @@ div.interest{
     z-index: 0;
     /* border: 1px solid; */
     height: 100%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: var(--Slate-100);
+}
+
+.abs-right{
+    height: 100%;
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    /* border: 1px solid; */
+
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--Slate-100);
 }
 
-.abs-right{
-    left: 0;
+.gaps{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option{
+    border: 1px solid var(--Slate-700);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+}
+
+input[type="radio"] {
+    height: 20px;
+    width: 20px;
 }
