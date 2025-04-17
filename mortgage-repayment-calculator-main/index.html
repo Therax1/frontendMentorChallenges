@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="mortgage-calc">
-    <div class="part-1">
+    <form class="part-1">
       <ul class="title">
         <li class="item1">
           Mortage Calculator
@@ -30,6 +30,9 @@
             £
           </p>
         </div>
+        <p class="error-states">
+
+        </p>
       </div>
       <div class="term-interest">
         <div class="term">
@@ -42,17 +45,23 @@
               years
             </p>
           </div>
+          <p class="error-states">
+          
+          </p>
         </div>
         <div class="interest">
           <label for="rate">
             Interest Rate
           </label>
           <div class="input-rate">
-            <input type="text" name="rate" id="rate ">
+            <input type="text" name="rate" id="rate">
             <p class="abs">
               %
             </p>
           </div>
+          <p class="error-states">
+          
+          </p>
         </div>
       </div>
       <div class="mort-type">
@@ -69,15 +78,18 @@
             Interest Only
           </label>
         </div>
+        <p class="error-states">
+          
+        </p>
       </div>
 
-      <button type="button" class="calculate">
+      <button type="submit" class="calculate">
         <img src="./assets/images/icon-calculator.svg" alt="Calculate Repayement Img">
         <p class="calculate-repayment">
           Calculate Repayments
         </p>
       </button>
-    </div>
+    </form>
     <div class="part-2">
       <div class="no-result">
         <img src="./assets/images/illustration-empty.svg" alt="">
@@ -138,5 +150,6 @@
   <!-- Completed results start -->
 
   <!-- Completed results end -->
+   <script src="./assets/js/script.js"></script>
 </body>
 </html>
