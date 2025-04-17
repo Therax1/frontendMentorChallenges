@@ -1,0 +1,165 @@
+/* ========================
+   1. RESET / BASE
+======================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+
+body {
+    height: 100vh;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Slate-100);
+    font-family: "PlusJakartaSans";
+    
+}
+
+/* ========================
+   2. VARIABLES CSS && FONTS 
+======================== */
+:root {
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("../fonts/static/PlusJakartaSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("../fonts/static/PlusJakartaSans-Medium.ttf");
+    font-weight: 500;
+}
+
+/* ========================
+   3. LAYOUT
+   (Grids, containers, wrappers)
+======================== */
+.mortgage-calc{
+    display: flex;
+    background-color: var(--White);
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+
+
+
+/* ========================
+   4. COMPONENTS
+   (Buttons, cards, navbars, footers)
+======================== */
+.part-1{
+    width: 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item1{
+    font-size: 1.5rem;
+}
+
+.inputs{
+    position: relative;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.inputs input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--Slate-700);
+    border-radius: 0.3rem;
+}
+
+
+.part-2{
+    width: 50%;  
+    background-color: var(--Slate-900);
+    border-radius: 0 0 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--White);
+}
+
+.term-interest{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.4rem;
+    
+}
+
+div.term{
+    flex-grow: 1;
+}
+
+div.interest{
+    flex-grow: 1;
+}
+
+
+.description{
+    font-family: "";
+    font-weight: 500;
+}
+
+/* ========================
+6. UTILITIES
+(Text-center, margin, padding, etc.)
+======================== */
+
+.none{
+    display: none !important;
+}
+.abs{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    /* border: 1px solid; */
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Slate-100);
+}
+
+.abs-right{
+    left: 0;
+}

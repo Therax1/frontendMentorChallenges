@@ -24,11 +24,13 @@
         <label for="mortgage-amt">
           Mortgage Amount
         </label>
-        <div class="input-amt">
+        <div class="inputs input-amt">
           <input type="text" name="mortgage-amt" id="amt">
-          <p class="abs">
-            £
-          </p>
+          <div class="abs abs-right">
+            <p class="">
+              £
+            </p>
+          </div>
         </div>
         <p class="error-states">
 
@@ -39,11 +41,13 @@
           <label for="term">
             Mortgage Term
           </label>
-          <div class="input-term">
+          <div class="inputs input-term">
             <input type="text" name="term" id="term">
-            <p class="abs">
-              years
-            </p>
+            <div class="abs">
+              <p class="">
+                years
+              </p>
+            </div>
           </div>
           <p class="error-states">
           
@@ -53,11 +57,13 @@
           <label for="rate">
             Interest Rate
           </label>
-          <div class="input-rate">
+          <div class="inputs input-rate">
             <input type="text" name="rate" id="rate">
-            <p class="abs">
-              %
-            </p>
+            <div class="abs">
+              <p class="">
+                %
+              </p>
+            </div>
           </div>
           <p class="error-states">
           
@@ -102,7 +108,7 @@
         your monthly repayments would be.
       </p>
     </div>
-    <div class="part-2-calculated">
+    <div hidden class="part-2-calculated">
       <h2 class="your-result">
         Your results 
       </h2>
