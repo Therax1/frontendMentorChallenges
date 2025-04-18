@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const partChange = document.querySelector(".part-2");
     const resultShow = document.querySelector(".part-2-calculated")
     const mortgageTypes  = document.querySelectorAll(".mortgage-type");
-    
+    const clearAll = document.querySelector(".text500");
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       
@@ -46,15 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       errorBox.textContent = ""; // Clear error
     });
   
-    // Permet de naviguer et soumettre au clavier
-    [amountInput, interestInput, yearsInput].forEach(input => {
-      input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          form.dispatchEvent(new Event("submit"));
-        }
-      });
-    });
-  
     function showError(message) {
       errorBox.textContent = message;
       result.innerHTML = "";
@@ -69,6 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
         this.parentElement.classList.add("yellow")
       }
     })
+  })
+
+  clearAll.addEventListener("click", ()=>{
+    amountInput.value = "";
+    interestInput.value = "";
+    yearsInput.value = "";
+    resultShow.value = "";
+    
   })
 
 
