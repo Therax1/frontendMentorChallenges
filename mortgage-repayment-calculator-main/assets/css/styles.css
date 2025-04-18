@@ -64,6 +64,7 @@ body {
     background-color: var(--White);
     border-radius: 1.2rem;
     overflow: hidden;
+    max-width: 1200px;
 }
 
 
@@ -109,17 +110,25 @@ body {
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
+    border: 1px solid var(--Slate-500);
+    border-radius: 0.3rem;
 }
 
 .inputs input{
     height: 100%;
     width: 100%;
-    border: 1px solid var(--Slate-700);
-    border-radius: 0.3rem;
+    border: none;
     outline: none;
+    font-size: 18px;
 }
 
+#amt{
+    text-indent: 50px;
+}
 
+#term, #rate{
+    text-indent: 12px;
+}
 .part-2{
     align-items: center;
     justify-content: center;
@@ -177,7 +186,7 @@ div.interest{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: #0000004a;
+    background-color: #000;
 }
 .monthly-repayment{
     color: var(--Slate-300);
@@ -282,4 +291,9 @@ input[type="radio"] {
     width: 50%;
     padding: 2rem;
     color: var(--White);
+}
+
+
+.yellow{
+    background-color: var(--Lime);
 }

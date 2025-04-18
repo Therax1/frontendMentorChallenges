@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorBox = document.querySelector(".error-states");
     const partChange = document.querySelector(".part-2");
     const resultShow = document.querySelector(".part-2-calculated")
-  
+    const radios  = document.querySelectorAll(".option");
+    
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       
@@ -58,5 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
       errorBox.textContent = message;
       result.innerHTML = "";
     }
-  });
+
+  radios.forEach(radio => {
+    radio.addEventListener("click", ()=>{
+      radio.classList.toggle("yellow")
+    })
+  })
+
+
+})
   
