@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorBox = document.querySelector(".error-states");
     const partChange = document.querySelector(".part-2");
     const resultShow = document.querySelector(".part-2-calculated")
-    const radios  = document.querySelectorAll(".option");
+    const mortgageTypes  = document.querySelectorAll(".mortgage-type");
     
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -60,9 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
       result.innerHTML = "";
     }
 
-  radios.forEach(radio => {
-    radio.addEventListener("click", ()=>{
-      radio.classList.toggle("yellow")
+  mortgageTypes.forEach(input => {
+    input.addEventListener("change", function(){
+      document.querySelectorAll(".option").forEach(div => {
+        div.classList.remove("yellow");
+      })
+      if(this.checked){
+        this.parentElement.classList.add("yellow")
+      }
     })
   })
 
