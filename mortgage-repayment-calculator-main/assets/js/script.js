@@ -5,10 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearsInput = document.querySelector("#term");
     const result = document.querySelector(".money");
     const errorBox = document.querySelector(".error-states");
+    const partChange = document.querySelector(".part-2");
+    const resultShow = document.querySelector(".part-2-calculated")
   
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-  
+      
+      partChange.classList.add("none")
+      resultShow.classList.remove("none")
+
+
       // On récupère les valeurs
       const amt = parseFloat(amountInput.value);
       const annualInterest = parseFloat(interestInput.value);

@@ -121,15 +121,9 @@ body {
 
 
 .part-2{
-    width: 50%;  
-    background-color: var(--Slate-900);
-    border-radius: 0 0 0 5rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--White);
 }
 
 .term-interest{
@@ -147,9 +141,14 @@ div.interest{
     flex-grow: 1;
 }
 
+.results{
+    font-weight: 700;
+    font-size: 26px;
+}
 
 .description{
     color: var(--Slate-300);
+    font-size: 19px;
 }
 
 
@@ -164,6 +163,56 @@ div.interest{
     font-weight: 700;
     font-size: 1rem;
     gap: 1rem;
+}
+
+.your-result-desc{
+    color: var(--Slate-300);
+    font-size: 19px;
+}
+
+.display-result{
+    padding: 2rem;
+    border-top: 3px solid var(--Lime);
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #0000004a;
+}
+.monthly-repayment{
+    color: var(--Slate-300);
+    font-size: 18px;
+}
+
+.monthly-repayment-amt{
+    height: 5.4rem;
+    display: flex;
+    align-items: center;
+    font-size: 54px;
+    color: var(--Lime);
+    padding: 3rem 0;
+}
+
+.line{
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.3;
+
+}
+
+.repay{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.repay-title{
+    color: var(--Slate-300);
+}
+
+.repay-show-money{
+    font-weight: 700;
+    font-size: 2rem;
 }
 /* ========================
 6. UTILITIES
@@ -195,7 +244,7 @@ div.interest{
     top: 0;
     z-index: 0;
     /* border: 1px solid; */
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,4 +271,15 @@ div.interest{
 input[type="radio"] {
     height: 20px;
     width: 20px;
+}
+
+.bgc-flex{
+    background-color: var(--Slate-900);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 0 0 0 6rem;
+    width: 50%;
+    padding: 2rem;
+    color: var(--White);
 }
