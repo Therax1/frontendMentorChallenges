@@ -14,25 +14,32 @@ body {
 
 }
 
+img{
+   width: 10%;
+   height: 100px;
+}
 /* ========================
    2. VARIABLES CSS && FONTS 
 ======================== */
 :root {
-  --Slate-100: hsl(202, 86%, 94%);
-  --Slate-300: hsl(203, 41%, 72%);
-  --Slate-500: hsl(200, 26%, 54%);
-  --Slate-700: hsl(200, 24%, 40%);
-  --Slate-900: hsl(202, 55%, 16%);
-  --Lime: hsl(61, 70%, 52%);
-  --white-lime: hsla(61, 70%, 52%, 0.317);
-  --Red: hsl(4, 69%, 50%);
-  --White: hsl(0, 0%, 100%);
+   --clr-Purple-100: hsl(254, 88%, 90%);
+   --clr-Purple-500: hsl(256, 67%, 59%);
+   
+   --clr-Yellow-100: hsl(31, 66%, 93%);
+   --clr-Yellow-500: hsl(39, 100%, 71%);
+   
+   --clr-White: hsl(0, 0%, 100%);
+   --clr-Black: hsl(0, 0.00%, 7.10%);
+
+   --ff-main: "DMSans";
+   --fw-normal: 400;
+   --fw-bold: 700;
 }
 
 @font-face {
-    font-family: "PlusJakartaSans";
-    src: url("../fonts/static/PlusJakartaSans-Bold.ttf");
-    font-weight: 700;
+    font-family: "DMSans";
+    src: url("./fonts/static/DMSans-Regular.ttf");
+    font-weight: 400;
 }
 
 /* ========================
@@ -44,9 +51,26 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 13rem 13rem 13rem ;
     grid-template-areas: 
-    'box-7 box-1 box-4'
-    ''
+    'column1 column2 column2 column3'
+    'column1 column2 column2 column3'
+    'column1 column4 column4 column4'
     ;
+}
+
+.column1{
+   background-color: var(--clr-Yellow-100);
+}
+
+.column2{
+   background-color: var(--clr-Purple-500);
+}
+
+.column3{
+   background-color: #000;
+}
+
+.column4{
+   background-color: #000;
 }
 
 /* ========================
