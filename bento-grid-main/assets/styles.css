@@ -11,19 +11,19 @@
 
 body {
     height: 100vh;
-
+    width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10rem 10rem;
 }
 
-img{
-   width: 10%;
-   height: 100px;
-}
 /* ========================
    2. VARIABLES CSS && FONTS 
 ======================== */
 :root {
-   --clr-Purple-100: hsl(254, 88%, 90%);
-   --clr-Purple-500: hsl(256, 67%, 59%);
+   --clr-Purple-100: #dacffc;
+   --clr-Purple-500: #7650dc;
    
    --clr-Yellow-100: hsl(31, 66%, 93%);
    --clr-Yellow-500: hsl(39, 100%, 71%);
@@ -48,13 +48,15 @@ img{
 ======================== */
 .container{
     display: grid;
+    flex: 1;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 13rem 13rem 13rem ;
+    gap: 1rem;
+    max-width: 60rem;
     grid-template-areas: 
-    'column1 column2 column2 column3'
-    'column1 column2 column2 column3'
-    'column1 column4 column4 column4'
-    ;
+    'column1 column2 column3'
+    'column1 column2 column3'
+    'column1 column4 column4';
 }
 
 .column1{
@@ -66,11 +68,11 @@ img{
 }
 
 .column3{
-   background-color: #000;
+   background-color: var(--clr-Purple-100);
 }
 
 .column4{
-   background-color: #000;
+   background-color: #f2f2f2;
 }
 
 /* ========================
