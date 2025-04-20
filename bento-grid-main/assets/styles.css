@@ -37,10 +37,8 @@ body{
     padding: 2rem 1rem;
 }
 
-
-
 img{
-   max-width: 40%;
+   max-width: 80%;
    display: block;
 }
 
@@ -138,6 +136,10 @@ div.manage img {
    margin-bottom: 1rem;
 }
 
+div.maintain{
+   background-color: var(--clr-yellow-bold);
+}
+
 div.schedule-to {
    place-content: center;
    padding-left: 1.5rem;
@@ -151,21 +153,17 @@ div.schedule-to img {
    max-width: 100%;
 }
 
-.faster {
+div.faster {
    place-content: center;
    background-color: var(--clr-white);
 }
 
-.grow {
+div.grow {
    grid-template-columns: 1fr 1fr;
    place-items: center;
    color: var(--clr-white);
    padding: 0;
    background-color: var(--clr-purple-bold);
-}
-
-.maintain{
-   background-color: var(--clr-yellow-bold);
 }
 
 /* columns */
@@ -183,8 +181,64 @@ div.schedule-to img {
    grid-area: column4;
 }
 
-/* Media queries */
+/* media query */
+@media screen and (max-width: 950px) {
+    .bento-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 13rem 13rem 13rem 13rem;
+        grid-template-areas: 
+            'column2 column3'
+            'column2 column3'
+            'column4 column4'
+            'column1 column1'
+        ;
+    }
 
-@media screen and (max-width: 920px) { 
-   
-}v*
+    .column1 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+   .bento-container {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto auto;
+       gap: 2rem;
+       grid-template-areas: 
+           'column2 '
+           'column3 '
+           'column4 '
+           'column1 '
+       ;
+   }
+
+   .bento-container > *, .contains-element {
+       gap: 2rem;
+   }
+
+   .column1 {
+       grid-template-columns: 1fr 1fr;
+   }
+
+   .contains-element, .contains-element:nth-child(1), .column1 {
+       grid-template-columns: 1fr;
+   }
+
+   div.manage img {
+       position: relative;
+       max-width: 80%;
+       margin-bottom: 1rem;
+   }
+  
+   div.maintain img {
+       position: relative;
+       bottom: -1rem;
+       left: 0;
+   }
+
+   .grow {
+       text-align: center;
+       grid-template-columns: 1fr;
+       padding: 1rem;
+   }
+}
