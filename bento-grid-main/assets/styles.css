@@ -1,3 +1,190 @@
 /* Polices */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+/* variables declarations */
+:root{
+   --clr-purple-light: hsl(254, 88%, 90%);
+   --clr-purple-bold: hsl(256, 67%, 59%);
+   --clr-yellow-light: hsl(31, 66%, 93%);
+   --clr-yellow-bold: hsl(39, 100%, 71%);
+   --clr-white: hsl(0, 0%, 100%);
+   --clr-black: hsl(0, 0.00%, 7.10%);
+   
+   --ff-main: "DM Sans", serif;
+    --fs-body: 1.125rem;
+    --fs-heading: 1.75rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+}
+
+
+/* resets */
+
+*, *::after, *::before{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body{
+   font-family: var(--ff-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-400);
+    line-height: 1.1;
+    color: var(--clr-Black);
+    background: #f9f9f9;
+    padding: 2rem 1rem;
+}
+
+
+
+img{
+   max-width: 40%;
+   display: block;
+}
+
+/* helpers */
+
+.grid{
+   display: grid;
+   gap: 1rem;
+}
+
+/* layout */
+
+.bento-container{
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+   grid-template-rows: 13rem 13rem 13rem;
+   gap: 1rem;
+   grid-template-areas: 
+   'column1 column2 column3'
+   'column1 column2 column3'
+   'column1 column4 column4';
+   max-width: 60rem;
+   margin-inline: auto;
+}
+
+.bento-container > *, .contains-element{
+   display: grid;
+   gap: 1rem;
+}
+
+.bento-element{
+   border-radius: 0.4rem;
+}
+
+.contains-element{
+   grid-template-columns: 1fr 1fr;
+}
+
+.contains-element:nth-child(1){
+   grid-template-columns: 0.95fr 2fr;
+}
+
+/* ui components */
+
+h1 {
+   font-size: 2.75rem;
+   font-weight: var(--fw-500);
+}
+
+h2 {
+   font-size: var(--fs-heading);
+   font-weight: var(--fw-500);
+   line-height: .9;
+}
+
+small {
+   font-size: var(--fs-body);
+}
+
+
+div.create{
+   background-color: var(--clr-yellow-light);
+   place-content: center;
+   padding: 1rem;
+}
+
+div.write{
+   background-color: var(--clr-yellow-bold);
+   place-content: center;
+   padding: 1.5rem;
+}
+
+div.social-media{
+   background-color: var(--clr-purple-bold);
+   place-content: center;
+   text-align: center;
+   color: var(--clr-white);
+}
+
+div.social-media img{
+   margin-inline: auto;
+   max-width: 10rem;
+}
+
+div.manage {
+   position: relative;
+   overflow-x: hidden;
+   background-color: var(--clr-white);
+}
+
+div.manage img {
+   position: relative;
+   right: -2rem;
+   max-width: 100%;
+   margin-bottom: 1rem;
+}
+
+div.schedule-to {
+   place-content: center;
+   padding-left: 1.5rem;
+   overflow: hidden;
+   background-color: var(--clr-purple-light);
+}
+
+div.schedule-to img {
+   position: relative;
+   right: -1.5rem;
+   max-width: 100%;
+}
+
+.faster {
+   place-content: center;
+   background-color: var(--clr-white);
+}
+
+.grow {
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
+   color: var(--clr-white);
+   padding: 0;
+   background-color: var(--clr-purple-bold);
+}
+
+.maintain{
+   background-color: var(--clr-yellow-bold);
+}
+
+/* columns */
+
+.column1 {
+   grid-area: column1;
+}
+.column2 {
+   grid-area: column2;
+}
+.column3 {
+   grid-area: column3;
+}
+.column4 {
+   grid-area: column4;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 920px) { 
+   
+}v*
