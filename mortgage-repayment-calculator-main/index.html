@@ -10,155 +10,83 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-  <div class="mortgage-calc">
-    <form class="part-1">
-      <ul class="title">
-        <li class="item1">
-          Mortage Calculator
-        </li>
-        <li class="item2">
-          <a class="text500" href="#">Clear All</a>
-        </li>
-      </ul>
-      <div class="amount gaps">
-        <label class="label text500" for="label mortgage-amt">
-          Mortgage Amount
-        </label>
+  
+<main class="mortgage-calc">
+    <form class="part1">
+      <header>
+        <h2 class="item1"> Mortage Calculator </h2>
+        <a class="text500" href="#">Clear All</a>
+      </header>
+      <div class="amount">
+        <label class="label text500" for="label mortgage-amt"> Mortgage Amount </label>
         <div class="inputs input-amt">
           <input type="text" name="mortgage-amt" id="amt">
-          <div class="abs-right">
-            
-            <p class="">
-              £
-            </p>
-          </div>
+          <span class=""> £ </span>
         </div>
         <p class="error-states">
-
+          Error
         </p>
       </div>
       <div class="term-interest">
-        <div class="term gaps">
-          <label class="text500 label" for="label term">
-            Mortgage Term
-          </label>
+        <div class="term">
+          <label class="text500 label" for=""> Mortgage Term </label>
           <div class="inputs input-term">
             <input type="text" name="term" id="term">
-            <div class="abs">
-              <p class="">
-                years
-              </p>
-            </div>
+              <span class=""> years </span>
           </div>
           <p class="error-states">
-          
+            Error
           </p>
         </div>
-        <div class="interest gaps">
-          <label class="label text500" for="label rate">
-            Interest Rate
-          </label>
+        <div class="interest">
+          <label class="label text500" for=""> Interest Rate </label>
           <div class="inputs input-rate">
             <input type="text" name="rate" id="rate">
-            <div class="abs">
-              <p class="">
-                %
-              </p>
-            </div>
+            <span class=""> % </span>
           </div>
           <p class="error-states">
-          
+           Error
           </p>
         </div>
       </div>
-      <div class="mort-type gaps">
-        <label class="label text500" for="type-title ">
-          Mortgage Type
-        </label>
-        
+      <div class="mortgage-type">
+        <label class="label text500" for=""> Mortgage Type </label>
         <div class="repayment option">
-          <input class="mortgage-type" type="radio" name="options" id="repayment">
+          <input class="mortgage-type" type="radio" name="repayment" id="repayment">
           <label for="repayment">Repayment</label>
         </div>
         <div class="interest-only option">
-          <input class="mortgage-type" type="radio" name="options" id="interest-only">
-          <label for="interest-only">
-            Interest Only
-          </label>
+          <input class="mortgage-type" type="radio" name="interest-only" id="interest-only">
+          <label for="interest-only"> Interest Only </label>
         </div>
-        
-        <p class="error-states">
-          
-        </p>
+        <p class="error-states"> Error </p>
       </div>
-
       <button type="submit" class="calculate">
         <img src="./assets/images/icon-calculator.svg" alt="Calculate Repayement Img">
-        <p class="calculate-repayment">
-          Calculate Repayments
-        </p>
+        <p class="calculate-repayment"> Calculate Repayments </p>
       </button>
     </form>
-    <div class="part-2 bgc-flex">
-      <div class="no-result">
-        <img src="./assets/images/illustration-empty.svg" alt="">
-      </div>
-      <h3 class="results">
-        Results shown here
-      </h3>
-      <p class="description">
-        Complete the form and click “calculate repayments” to see what 
-        your monthly repayments would be.
-      </p>
+    <div class="noresult dark">
+      <img src="./assets/images/illustration-empty.svg" alt="">
+      <h3 class="results"> Results shown here </h3>
+      <p class="description">Complete the form and click “calculate repayments” to see what your monthly repayments would be. </p>
     </div>
-    <div class="part-2-calculated none bgc-flex">
-      <h2 class="your-result">
-        Your results 
-      </h2>
-      <p class="your-result-desc">
-        Your results are shown below based on the information you provided. 
-        To adjust the results, edit the form and click “calculate repayments” again.
-      </p>
+    <div class="part-2-calculated none">
+      <h2 class="your-result"> Your results </h2>
+      <p class="your-result-desc"> Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again. </p>
       <div class="display-result">
-        <p class="monthly-repayment">
-          Your monthly repayments
-        </p>
-        <p class="monthly-repayment-amt">
-          <span class="devise"> 
-            £
-          </span>
-          <span class="money">
-            1,797.74
-          </span>
-        </p>
+        <p class="monthly-repayment"> Your monthly repayments </p>
+        <h1 class="monthly-repayment-amt"> <span class="devise"> £ </span> <span class="money"> 1,797.74 </span> </h1>
         <div class="line">
-
         </div>
-        <div class="repay">
-          <p class="repay-title">
-            Total you'll repay over the term           
-          </p>
-          <p class="repay-show-money">
-            <span class="devise-repay">
-              £
-            </span>
-            <span class="repay-money">
-              539,322.94
-            </span>
-          </p>
+        <div class="total-repay">
+          <p class="repay-title"> Total you'll repay over the term </p>
+          <p class="repay-show-money"> <span class="devise-repay"> £ </span> <span class="repay-money"> 539,322.94 </span> </p>
         </div>
       </div>
     </div>
-  </div>
+</main>
 
-  <!-- Empty results start -->
-
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  <!-- Completed results end -->
-   <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
