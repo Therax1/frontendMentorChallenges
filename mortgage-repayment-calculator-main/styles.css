@@ -1,65 +1,45 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+/* Variables declarations */
+
+:root{
+    /* Couleurs */
+    --clr-lime: hsl(61, 70%, 52%);
+    --clr-red: hsl(4, 69%, 50%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slate-100: hsl(202, 86%, 94%);
+    --clr-slate-300: hsl(203, 41%, 72%);
+    --clr-slate-500: hsl(200, 26%, 54%);
+    --clr-slate-700: hsl(200, 24%, 40%);
+    --clr-slate-900: hsl(202, 55%, 16%);
+
+    /* Textes */
+    --ff-main: "Plus Jakarta Sans", sans-serif;
+    --fs-main: 1rem;
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
 /* ========================
-   1. RESET / BASE
+   RESETS 
 ======================== */
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-
+/* ========================
+   CONTAINERS
+======================== */
 body {
-    height: 100vh;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--Slate-100);
-    font-family: "PlusJakartaSans";
-    
+    font-family: var(--ff-main);
 }
 
-/* ========================
-   2. VARIABLES CSS && FONTS 
-======================== */
-:root {
-  --Slate-100: hsl(202, 86%, 94%);
-  --Slate-300: hsl(203, 41%, 72%);
-  --Slate-500: hsl(200, 26%, 54%);
-  --Slate-700: hsl(200, 24%, 40%);
-  --Slate-900: hsl(202, 55%, 16%);
-  --Lime: hsl(61, 70%, 52%);
-  --white-lime: hsla(61, 70%, 52%, 0.317);
-  --Red: hsl(4, 69%, 50%);
-  --White: hsl(0, 0%, 100%);
-}
-
-@font-face {
-    font-family: "PlusJakartaSans";
-    src: url("../fonts/static/PlusJakartaSans-Bold.ttf");
-    font-weight: 700;
-}
-
-
-@font-face {
-    font-family: "PlusJakartaSans";
-    src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf");
-    font-weight: 500;
-}
-
-/* ========================
-   3. LAYOUT
-   (Grids, containers, wrappers)
-======================== */
 .mortgage-calc{
     display: flex;
     background-color: var(--White);
@@ -68,12 +48,8 @@ body {
     max-width: 1200px;
 }
 
-
-
-
 /* ========================
-   4. COMPONENTS
-   (Buttons, cards, navbars, footers)
+   COMPONENTS
 ======================== */
 
 .part-1{
