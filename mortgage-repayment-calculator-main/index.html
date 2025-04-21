@@ -18,46 +18,46 @@
         <h2 class="item1"> Mortage Calculator </h2>
         <a class="text500" href="#">Clear All</a>
       </header>
-      <div class="amount">
+      <div class="amount gap">
         <label class="label text500" for="label mortgage-amt"> Mortgage Amount </label>
-        <div class="inputs input-amt">
+        <div class="inputs input-amt radius">
           <input type="text" name="mortgage-amt" id="amt">
-          <span class=""> £ </span>
+          <span class="left"> £ </span>
         </div>
         <p class="error-states">
           Error
         </p>
       </div>
       <div class="term-interest">
-        <div class="term">
+        <div class="term gap">
           <label class="text500 label" for=""> Mortgage Term </label>
-          <div class="inputs input-term">
+          <div class="inputs input-term radius">
             <input type="text" name="term" id="term">
-              <span class=""> years </span>
+            <span class="abs"> years </span>
           </div>
           <p class="error-states">
             Error
           </p>
         </div>
-        <div class="interest">
+        <div class="interest gap">
           <label class="label text500" for=""> Interest Rate </label>
-          <div class="inputs input-rate">
+          <div class="inputs input-rate radius">
             <input type="text" name="rate" id="rate">
-            <span class=""> % </span>
+            <span class="abs"> % </span>
           </div>
           <p class="error-states">
            Error
           </p>
         </div>
       </div>
-      <div class="mortgage-type">
+      <div class="mortgage-type gap">
         <label class="label text500" for=""> Mortgage Type </label>
-        <div class="repayment option">
-          <input class="mortgage-type" type="radio" name="repayment" id="repayment">
+        <div class="repayment option radius">
+          <input class="mortgage-type" type="radio" name="option" id="repayment">
           <label for="repayment">Repayment</label>
         </div>
-        <div class="interest-only option">
-          <input class="mortgage-type" type="radio" name="interest-only" id="interest-only">
+        <div class="interest-only option radius">
+          <input class="mortgage-type" type="radio" name="option" id="interest-only">
           <label for="interest-only"> Interest Only </label>
         </div>
         <p class="error-states"> Error </p>
@@ -69,7 +69,7 @@
     </form>
 
     <!-- Affichage d'aucun resultat -->
-    <div class="noresult dark">
+    <div class="part2 noresult dark">
       <img src="./assets/images/illustration-empty.svg" alt="">
       <h3 class="results"> Results shown here </h3>
       <p class="description">Complete the form and click “calculate repayments” to see what your monthly repayments would be. </p>
@@ -92,6 +92,6 @@
     </div>
 </main>
 
-<script src="./"></script>
+<script src=""></script>
 </body>
 </html>

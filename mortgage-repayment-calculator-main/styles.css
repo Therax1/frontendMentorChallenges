@@ -17,7 +17,7 @@
 
     /* Textes */
     --ff-main: "Plus Jakarta Sans", sans-serif;
-    --fs-main: 1rem;
+    --fs-main: 1;
     --fw-500: 500;
     --fw-700: 700;
 }
@@ -36,243 +36,184 @@
    CONTAINERS
 ======================== */
 body {
-    background-color: var(--Slate-100);
+    background-color: var(--clr-slate-100);
     font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    place-content: center;
+    place-items: center;
+
 }
 
 .mortgage-calc{
+    max-width: 60rem;
+    background-color: var(--clr-white);
     display: flex;
-    background-color: var(--White);
-    border-radius: 1.2rem;
     overflow: hidden;
-    max-width: 1200px;
+    border-radius: 1rem;
 }
 
-/* ========================
-   COMPONENTS
-======================== */
-
-.part-1{
-    width: 50%;
-    padding: 2.5rem;
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.part1{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
-}
+    gap: 1.7rem;
+}  
 
-.title{
+.part2{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.text500{
-    color: var(--Slate-500);
-}
-
-.item1{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.amount{
-    gap: 40px;
-}
-
-.inputs{
-    position: relative;
-    height: 3rem;
-    overflow: hidden;
-    border-radius: 0.3rem;
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--Slate-500);
-    border-radius: 0.3rem;
-}
-
-.inputs input{
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 18px;
-}
-
-#amt{
-    text-indent: 50px;
-}
-
-#term, #rate{
-    text-indent: 12px;
-}
-.part-2{
-    align-items: center;
+    flex: 1;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-.term-interest{
-    display: flex;
-    justify-content: space-between;
-    gap: 1.4rem;
-    
-}
-
-div.term{
-    flex-grow: 1;
-}
-
-div.interest{
-    flex-grow: 1;
-}
-
-.results{
-    font-weight: 700;
-    font-size: 26px;
-}
-
-.description{
-    color: var(--Slate-300);
-    font-size: 19px;
-}
-
-
-.calculate{
-    align-self: flex-start;
-    background-color: var(--Lime);
-    border: none;
-    border-radius: 2rem;
-    display: flex;
-    align-items: center;
-    padding: 0.8rem 1.5rem;
-    font-weight: 700;
-    font-size: 1rem;
     gap: 1rem;
+    background-color: var(--clr-slate-900);
+    border-radius: 0 0 0 5rem;
 }
 
-.your-result-desc{
-    color: var(--Slate-300);
-    font-size: 19px;
+/* Nth Child */
+
+.mortgage-calc > * {
+    padding: 2.4rem;
 }
 
-.display-result{
-    padding: 2rem;
-    border-top: 3px solid var(--Lime);
-    border-radius: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: #000;
-}
-.monthly-repayment{
-    color: var(--Slate-300);
-    font-size: 18px;
+/* Texts */
+.label{
+    font-weight: var(--fw-500);
 }
 
-.monthly-repayment-amt{
-    height: 5.4rem;
-    display: flex;
-    align-items: center;
-    font-size: 54px;
-    font-weight: 700;
-    color: var(--Lime);
-    padding: 3rem 0;
-}
 
-.line{
-    height: 1px;
-    background-color: #fff;
-    opacity: 0.3;
-
-}
-
-.repay{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.repay-title{
-    color: var(--Slate-300);
-}
-
-.repay-show-money{
-    font-weight: 700;
-    font-size: 2rem;
-}
-/* ========================
-6. UTILITIES
-(Text-center, margin, padding, etc.)
-======================== */
-
+/* Helpers */
 .none{
     display: none !important;
 }
+
+.text500{
+    color: var(--clr-slate-500);
+}
+
+.error-states {
+    display: none;
+}
+
+.radius {
+    border-radius: 0.3rem;
+}
+
+.gap{
+    display: flex;
+flex-direction: column;
+gap: 0.6rem;
+}
+
 .abs{
     position: absolute;
+    top: 50%;
     right: 0;
-    top: 0;
-    z-index: 0;
-    /* border: 1px solid; */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    background-color: var(--Slate-100);
+    transform: translate(0, -50%);
+    padding: 1rem;
+    background-color: var(--clr-slate-100);
+    align-self: center;
+    color: var(--clr-slate-700);
+    font-weight: var(--fw-700);
 }
 
-.abs-right{
-    height: 100%;
-    padding: 0 1rem;
+.left{
     position: absolute;
+    top: 50%;
     left: 0;
-    top: 0;
-    z-index: 0;
-    /* border: 1px solid; */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Slate-100);
+    transform: translate(0, -50%);
+    padding: 1rem;
+    background-color: var(--clr-slate-100);
+    align-self: center;
+    color: var(--clr-slate-700);
+    font-weight: var(--fw-700);
 }
 
-.gaps{
+/* ========================
+   UI COMPONENTS
+======================== */
+
+.inputs {
+    position: relative;
+    border: 1px solid var(--clr-slate-300);
+    min-height: 3rem;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
+    
+    overflow: hidden;
+    
+}
+
+.inputs input{
+   width: 100%;
+   height: 3rem;
+   font-size: var(--fs-main);
+   text-indent: 5px;
+   outline: none;
+   border: none;
+   color: var(--clr-slate-900);
+    font-weight: var(--fw-700);
+}
+
+#amt{
+    text-indent: 3rem;
+}
+.term-interest{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.term{
+    flex: 1;
+}
+
+.interest{
+    flex: 1;
 }
 
 .option{
-    border: 1px solid var(--Slate-700);
-    height: 3rem;
+    border: 1px solid var(--clr-slate-300);
+    padding: 0.9rem;
     display: flex;
+    gap: 1rem;
+    font-weight: var(--fw-700);
+}
+
+.calculate{
+    max-width: 18rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--clr-lime);
+    border-radius: 1.9rem;
+    display: flex;
+    padding: 0.8rem 1.3rem;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    font-weight: 700;
-    border-radius: 0.3rem;
-    padding: 0 1rem;
+    gap: 0.6rem;
+    font-weight: var(--fw-700);
+    font-size: 1rem;
+    color: var(--clr-slate-900)
 }
 
-input[type="radio"] {
-    height: 20px;
-    width: 20px;
+.results{
+    color: var(--clr-white);
 }
 
-.bgc-flex{
-    background-color: var(--Slate-900);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border-radius: 0 0 0 6rem;
-    width: 50%;
-    padding: 2rem;
-    color: var(--White);
+.description{
+    color: var(--clr-slate-300);
+    font-size: 0.94rem;
+    font-weight: var(--fw-500);
 }
 
 
-.yellow{
-    background-color: var(--white-lime);
-    border: 1px solid var(--Lime);
-}
