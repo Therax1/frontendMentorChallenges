@@ -62,7 +62,7 @@
         </div>
         <p class="error-states"> Error </p>
       </div>
-      <button type="submit" class="calculate">
+      <button type="button" class="calculate">
         <img src="./assets/images/icon-calculator.svg" alt="Calculate Repayement Img">
         <p class="calculate-repayment"> Calculate Repayments </p>
       </button>
@@ -76,22 +76,24 @@
     </div>
 
     <!-- Apparaît après le Calcul -->
-    <div class="part-2-calculated none">
+    <div class="part2-calculated none">
       <h2 class="your-result"> Your results </h2>
       <p class="your-result-desc"> Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again. </p>
       <div class="display-result">
-        <p class="monthly-repayment"> Your monthly repayments </p>
-        <h1 class="monthly-repayment-amt"> <span class="devise"> £ </span> <span class="money"> 1,797.74 </span> </h1>
+        <div class="infos">
+          <p class="monthly-repayment"> Your monthly repayments </p>
+          <h1 class="monthly-repayment-amt"> <span class="devise"> £ </span> <span class="money">1,797.74 </span> </h1>
+        </div>
         <div class="line">
         </div>
-        <div class="total-repay">
+        <div class="total-repay ">
           <p class="repay-title"> Total you'll repay over the term </p>
-          <p class="repay-show-money"> <span class="devise-repay"> £ </span> <span class="repay-money"> 539,322.94 </span> </p>
+          <h5 class="repay-show-money"> <span class="devise-repay"> £ </span> <span class="repay-money"> 539,322.94 </span> </h5>
         </div>
       </div>
     </div>
 </main>
 
-<script src=""></script>
+<script src="./script.js"></script>
 </body>
 </html>

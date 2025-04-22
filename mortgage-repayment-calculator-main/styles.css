@@ -38,6 +38,7 @@
 body {
     background-color: var(--clr-slate-100);
     font-family: var(--ff-main);
+    font-weight: var(--fw-500);
     font-size: var(--fs-main);
     height: 100vh;
     /* display: flex;
@@ -80,6 +81,16 @@ header{
     border-radius: 0 0 0 5rem;
 }
 
+.part2-calculated{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    color: var(--clr-white);
+    border-radius: 0 0 0 5rem;
+    background-color: var(--clr-slate-900);
+}
+
 /* Nth Child */
 
 .mortgage-calc > * {
@@ -87,10 +98,16 @@ header{
 }
 
 /* Texts */
-.label{
-    font-weight: var(--fw-500);
+
+h1{
+    font-weight: var(--fw-700);
+    font-size: 3rem;
+    color: var(--clr-lime);
 }
 
+h5{
+    font-size: 1.3rem;
+}
 
 /* Helpers */
 .none{
@@ -111,8 +128,8 @@ header{
 
 .gap{
     display: flex;
-flex-direction: column;
-gap: 0.6rem;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .abs{
@@ -149,7 +166,6 @@ gap: 0.6rem;
     min-height: 3rem;
     display: flex;
     gap: 1rem;
-    
     overflow: hidden;
     
 }
@@ -168,6 +184,7 @@ gap: 0.6rem;
 #amt{
     text-indent: 3rem;
 }
+
 .term-interest{
     display: flex;
     gap: 1rem;
@@ -211,9 +228,40 @@ gap: 0.6rem;
 }
 
 .description{
-    color: var(--clr-slate-300);
+    color: var(--clr-slate-100);
     font-size: 0.94rem;
-    font-weight: var(--fw-500);
 }
 
+.display-result{
+    padding: 1.3rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: #00000036;
+    border-radius: 0.5rem;
+    border-top: 3px solid var(--clr-lime);
+}
 
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.line{
+    height: 0.005rem;
+    opacity: 0.3;
+    background-color: var(--clr-white);
+}
+
+.repay-title{
+    color: var(--clr-slate-100);
+}
+
+.total-repay > *:not(:first-child){
+    margin-top: 0.8rem;
+}
+
+.total-repay > :first-child{
+    margin-top: 0.9rem;
+}
