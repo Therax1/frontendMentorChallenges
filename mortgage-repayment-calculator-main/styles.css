@@ -50,6 +50,8 @@ body {
 }
 
 .mortgage-calc{
+    /* min-width: 46.875rem; */
+    flex-wrap: wrap;
     max-width: 60rem;
     background-color: var(--clr-white);
     display: flex;
@@ -60,6 +62,7 @@ body {
 header{
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .part1{
@@ -95,7 +98,9 @@ header{
 
 .mortgage-calc > * {
     padding: 2.4rem;
+    /* min-width: 24.375rem; */
 }
+
 
 /* Texts */
 
@@ -115,7 +120,7 @@ h5{
 }
 
 .text500{
-    color: var(--clr-slate-500);
+    color: var(--clr-slate-700);
 }
 
 .error-states {
@@ -162,7 +167,7 @@ h5{
 
 .inputs {
     position: relative;
-    border: 1px solid var(--clr-slate-300);
+    border: 1px solid var(--clr-slate-500);
     min-height: 3rem;
     display: flex;
     gap: 1rem;
@@ -187,8 +192,13 @@ h5{
 
 .term-interest{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
+}
+
+.term-interest input{
+    min-width: 8.813rem;
 }
 
 .term{
@@ -200,15 +210,20 @@ h5{
 }
 
 .option{
-    border: 1px solid var(--clr-slate-300);
-    padding: 0.9rem;
+    border: 1px solid var(--clr-slate-500);
+    padding: 0.8rem;
+    color: var(--clr-slate-900);
     display: flex;
     gap: 1rem;
     font-weight: var(--fw-700);
 }
 
+input[type= "radio"]{
+    width: 20px;
+}
+
 .calculate{
-    max-width: 18rem;
+    max-width: 18.5rem;
     border: none;
     cursor: pointer;
     background-color: var(--clr-lime);
@@ -264,4 +279,10 @@ h5{
 
 .total-repay > :first-child{
     margin-top: 0.9rem;
+}
+
+@media screen and (max-width: 768px){
+    .part2, .part2-calculated{
+        border-radius: 0 !important;
+    }
 }
