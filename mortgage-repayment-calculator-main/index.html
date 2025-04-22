@@ -16,7 +16,7 @@
     <form class="part1">
       <header>
         <h2 class="item1"> Mortage Calculator </h2>
-        <a class="text500" href="#">Clear All</a>
+        <a class="text500 clearAll" href="#">Clear All</a>
       </header>
       <div class="amount gap">
         <label class="label text500" for="label mortgage-amt"> Mortgage Amount </label>
@@ -25,7 +25,7 @@
           <span class="left"> £ </span>
         </div>
         <p class="error-states">
-          Error
+          This field is required
         </p>
       </div>
       <div class="term-interest">
@@ -36,7 +36,7 @@
             <span class="abs"> years </span>
           </div>
           <p class="error-states">
-            Error
+            This field is required
           </p>
         </div>
         <div class="interest gap">
@@ -46,21 +46,21 @@
             <span class="abs"> % </span>
           </div>
           <p class="error-states">
-           Error
+            This field is required
           </p>
         </div>
       </div>
       <div class="mortgage-type gap">
         <label class="label text500" for=""> Mortgage Type </label>
         <div class="repayment option radius">
-          <input class="mortgage-type" type="radio" name="option" id="repayment">
+          <input class="type" type="radio" name="option" id="repayment">
           <label for="repayment text500">Repayment</label>
         </div>
         <div class="interest-only option radius">
-          <input class="mortgage-type" type="radio" name="option" id="interest-only">
+          <input class="type" type="radio" name="option" id="interest-only">
           <label for="interest-only"> Interest Only </label>
         </div>
-        <p class="error-states"> Error </p>
+        <p class="error-states"> This field is required </p>
       </div>
       <button type="button" class="calculate">
         <img src="./assets/images/icon-calculator.svg" alt="Calculate Repayement Img">

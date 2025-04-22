@@ -7,6 +7,7 @@
 :root{
     /* Couleurs */
     --clr-lime: hsl(61, 70%, 52%);
+    --clr-lime-light: hsla(61, 70%, 52%, 0.505);
     --clr-red: hsl(4, 69%, 50%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-slate-100: hsl(202, 86%, 94%);
@@ -50,7 +51,6 @@ body {
 }
 
 .mortgage-calc{
-    /* min-width: 46.875rem; */
     flex-wrap: wrap;
     max-width: 60rem;
     background-color: var(--clr-white);
@@ -98,7 +98,7 @@ header{
 
 .mortgage-calc > * {
     padding: 2.4rem;
-    /* min-width: 24.375rem; */
+    /* min-width: 30rem; */
 }
 
 
@@ -125,6 +125,9 @@ h5{
 
 .error-states {
     display: none;
+    color: var(--clr-red);
+    font-size: 0.86rem;
+    letter-spacing: -0.023rem;
 }
 
 .radius {
@@ -143,8 +146,10 @@ h5{
     right: 0;
     transform: translate(0, -50%);
     padding: 1rem;
+    /* background-color: var(--clr-red); */
     background-color: var(--clr-slate-100);
     align-self: center;
+    /* color: var(--clr-slate-100); */
     color: var(--clr-slate-700);
     font-weight: var(--fw-700);
 }
@@ -155,8 +160,10 @@ h5{
     left: 0;
     transform: translate(0, -50%);
     padding: 1rem;
+    /* background-color: var(--clr-red); */
     background-color: var(--clr-slate-100);
     align-self: center;
+    /* color: var(--clr-slate-100); */
     color: var(--clr-slate-700);
     font-weight: var(--fw-700);
 }
@@ -167,12 +174,13 @@ h5{
 
 .inputs {
     position: relative;
+    /* border: 1px solid var(--clr-red); */
     border: 1px solid var(--clr-slate-500);
     min-height: 3rem;
     display: flex;
     gap: 1rem;
     overflow: hidden;
-    
+    transition: 0.3s;
 }
 
 .inputs input{
@@ -184,6 +192,10 @@ h5{
    border: none;
    color: var(--clr-slate-900);
     font-weight: var(--fw-700);
+}
+
+.inputs:focus-within {
+    border: 1px solid var(--clr-slate-700);
 }
 
 #amt{
@@ -215,11 +227,40 @@ h5{
     color: var(--clr-slate-900);
     display: flex;
     gap: 1rem;
+    transition: 0.3s;
     font-weight: var(--fw-700);
 }
 
+.option, .option > *{
+    cursor: pointer;
+}
+
+.option:hover{
+    border: 1px solid  var(--clr-lime-light);
+}
+
+.option.select-radio{
+    background-color: var(--clr-lime-light);
+    border: 1px solid var(--clr-lime);
+}
+
+.option.select-radio input[type = 'radio']{
+    outline: 2px solid var(--clr-lime);
+}
+
 input[type= "radio"]{
-    width: 20px;
+    appearance: none;
+    width: .56rem;
+    height: .56rem;
+    align-self: center;
+    margin-left: .5rem;
+    outline: 2px solid var(--clr-slate-900);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+input[type= "radio"]:checked {
+    background-color: var(--clr-lime);
 }
 
 .calculate{
@@ -235,7 +276,12 @@ input[type= "radio"]{
     gap: 0.6rem;
     font-weight: var(--fw-700);
     font-size: 1rem;
-    color: var(--clr-slate-900)
+    color: var(--clr-slate-900);
+    transition: 0.3s ;
+}
+
+.calculate:hover{
+    background-color: var(--clr-lime-light);
 }
 
 .results{
