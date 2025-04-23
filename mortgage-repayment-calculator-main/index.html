@@ -22,9 +22,9 @@
         <label class="label text500" for="label mortgage-amt"> Mortgage Amount </label>
         <div class="inputs input-amt radius">
           <input type="text" name="mortgage-amt" id="amt">
-          <span class="left"> £ </span>
+          <span class="left normal devise-amt"> £ </span>
         </div>
-        <p class="error-states">
+        <p class="error-states amt-err none">
           This field is required
         </p>
       </div>
@@ -33,9 +33,9 @@
           <label class="text500 label" for=""> Mortgage Term </label>
           <div class="inputs input-term radius">
             <input type="text" name="term" id="term">
-            <span class="abs"> years </span>
+            <span class="abs normal year"> years </span>
           </div>
-          <p class="error-states">
+          <p class="error-states year-err none">
             This field is required
           </p>
         </div>
@@ -43,9 +43,9 @@
           <label class="label text500" for=""> Interest Rate </label>
           <div class="inputs input-rate radius">
             <input type="text" name="rate" id="rate">
-            <span class="abs"> % </span>
+            <span class="abs normal rate"> % </span>
           </div>
-          <p class="error-states">
+          <p class="error-states rate-err none">
             This field is required
           </p>
         </div>
@@ -53,16 +53,16 @@
       <div class="mortgage-type gap">
         <label class="label text500" for=""> Mortgage Type </label>
         <div class="repayment option radius">
-          <input class="type" type="radio" name="option" id="repayment">
+          <input class="type" type="radio" name="mortgage-option" id="repayment" value = "repayement">
           <label for="repayment text500">Repayment</label>
         </div>
         <div class="interest-only option radius">
-          <input class="type" type="radio" name="option" id="interest-only">
+          <input class="type" type="radio" name="mortgage-option" id="interest-only" value = "interest">
           <label for="interest-only"> Interest Only </label>
         </div>
-        <p class="error-states"> This field is required </p>
+        <p class="error-states type-err none"> This field is required </p>
       </div>
-      <button type="button" class="calculate">
+      <button type="submit" class="calculate">
         <img src="./assets/images/icon-calculator.svg" alt="Calculate Repayement Img">
         <p class="calculate-repayment"> Calculate Repayments </p>
       </button>
@@ -82,13 +82,13 @@
       <div class="display-result">
         <div class="infos">
           <p class="monthly-repayment"> Your monthly repayments </p>
-          <h1 class="monthly-repayment-amt"> <span class="devise"> £ </span> <span class="money">1,797.74 </span> </h1>
+          <h1 class="monthly-repayment-amt"> <span class="devise"> £ </span> <span class="money"> </span> </h1>
         </div>
         <div class="line">
         </div>
         <div class="total-repay ">
           <p class="repay-title"> Total you'll repay over the term </p>
-          <h5 class="repay-show-money"> <span class="devise-repay"> £ </span> <span class="repay-money"> 539,322.94 </span> </h5>
+          <h5 class="repay-show-money"> <span class="devise-repay"> £ </span> <span class="repay-money">  </span> </h5>
         </div>
       </div>
     </div>

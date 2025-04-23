@@ -47,7 +47,6 @@ body {
     justify-content: center; */
     place-content: center;
     place-items: center;
-
 }
 
 .mortgage-calc{
@@ -124,10 +123,20 @@ h5{
 }
 
 .error-states {
-    display: none;
+    
     color: var(--clr-red);
     font-size: 0.86rem;
     letter-spacing: -0.023rem;
+}
+
+.normal{
+    background-color: var(--clr-slate-100);
+    color: var(--clr-slate-700);
+}
+
+.red{
+    background-color: var(--clr-red);
+    color: var(--clr-slate-100);
 }
 
 .radius {
@@ -147,10 +156,8 @@ h5{
     transform: translate(0, -50%);
     padding: 1rem;
     /* background-color: var(--clr-red); */
-    background-color: var(--clr-slate-100);
     align-self: center;
     /* color: var(--clr-slate-100); */
-    color: var(--clr-slate-700);
     font-weight: var(--fw-700);
 }
 
@@ -161,10 +168,8 @@ h5{
     transform: translate(0, -50%);
     padding: 1rem;
     /* background-color: var(--clr-red); */
-    background-color: var(--clr-slate-100);
     align-self: center;
     /* color: var(--clr-slate-100); */
-    color: var(--clr-slate-700);
     font-weight: var(--fw-700);
 }
 
