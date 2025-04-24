@@ -1,0 +1,216 @@
+/* ===========================
+   1. Reset Styles
+   =========================== */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Font Declarations
+   =========================== */
+   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+/* ===========================
+   Variables
+   =========================== */
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+    --White: hsl(0, 0%, 100%);
+    --light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue:hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    --ff-main: "Plus Jakarta Sans", sans-serif;
+
+    --fw-n: 500;
+    --fw-b: 800;
+    --fs: 1rem;
+}
+/* ===========================
+   Containers
+   =========================== */
+
+body {
+  font-family: var(--ff-main);
+  font-weight: var(--fw-n);
+  font-size: var(--fs);
+  background-color: var(--light-grayish-blue);
+  color: var(--Very-dark-blue);
+}
+
+/* ===========================
+   Helpers
+   =========================== */
+.hidden {
+  display: none !important;
+}
+
+.notification-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+
+/* ===========================
+3. Typography
+=========================== */
+.group-notif{
+    color: var(--Blue);
+}
+.post-notif{
+    color: var(--Grayish-blue);
+}
+
+h2 {
+  font-weight: var(--fw-b);
+  font-size: 1.5rem;
+}
+
+strong{
+    color: #000;
+}
+
+strong a:hover{
+    color: var(--Blue);
+}
+
+p {
+  font-size: 13px;
+  color: var(--Dark-grayish-blue);
+}
+
+blockquote{
+    color: var(--Dark-grayish-blue);
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: 1px solid var(--Light-grayish-blue-1);
+}
+
+blockquote:hover{
+    background-color: var(--Light-grayish-blue-2);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   4. Layout
+   =========================== */
+.notifications-page {
+  max-width: 37.5rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.notification-count{
+    background-color: var(--Blue);
+    color: var(--White);
+    font-weight: var(--fw-b);
+    border-radius: 0.3rem;
+    padding: 0rem 0.8rem;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ===========================
+   5. Components
+   =========================== */
+.notification {
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+
+.notification:last-child {
+  border-bottom: none;
+}
+
+.notification.unread {
+  background-color: var(--light-grayish-blue);
+}
+
+.notification strong {
+  font-weight: var(--fw-b);
+}
+
+.notification time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--Grayish-blue);
+}
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.notification-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.mark-all-read {
+  color: var(--Dark-grayish-blue);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+/* ===========================
+   6. Footer
+   =========================== */
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: #007bff;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}

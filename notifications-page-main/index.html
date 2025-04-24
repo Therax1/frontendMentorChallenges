@@ -9,48 +9,88 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <main class="notifications-page">
     <header class="notifications-header">
-      <h1>Notifications <span class="notification-count">3</span></h1>
-      <button class="mark-all-read">Mark all as read</button>
+      <div class="title">
+        <h2>Notifications</h2>
+        <span class="notification-count">3</span>
+      </div>
+      <a href="#" class="mark-all-read">Mark all as read</a>
     </header>
     <section class="notifications-list">
       <article class="notification unread">
-        <p><strong>Mark Webber</strong> reacted to your recent post <strong>My first tournament today!</strong></p>
-        <time datetime="PT1M">1m ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Mark Webber</a></strong> reacted to your recent post <strong class="post-notif"><a href="#">My first tournament today!</a></strong></p>
+            <time datetime="PT1M">1m ago</time>
+          </div>
+        </div>
       </article>
       <article class="notification unread">
-        <p><strong>Angela Gray</strong> followed you</p>
-        <time datetime="PT5M">5m ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Angela Gray</a></strong> followed you</p>
+            <time datetime="PT5M">5m ago</time>
+          </div>
+        </div>
       </article>
       <article class="notification unread">
-        <p><strong>Jacob Thompson</strong> has joined your group <strong>Chess Club</strong></p>
-        <time datetime="P1D">1 day ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Jacob Thompson</a></strong> has joined your group <strong class="group-notif"><a href="#">Chess Club</a></strong></p>
+            <time datetime="P1D">1 day ago</time>
+          </div>
+        </div>
       </article>
       <article class="notification">
-        <p><strong>Rizky Hasanuddin</strong> sent you a private message</p>
-        <time datetime="P5D">5 days ago</time>
-        <blockquote>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</blockquote>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Rizky Hasanuddin</a></strong> sent you a private message</p>
+            <time datetime="P5D">5 days ago</time>
+            <blockquote>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</blockquote>
+          </div>
+        </div>
       </article>
       <article class="notification">
-        <p><strong>Kimberly Smith</strong> commented on your picture</p>
-        <time datetime="P1W">1 week ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Kimberly Smith</a></strong> commented on your picture</p>
+            <time datetime="P1W">1 week ago</time>
+          </div>
+          <img src="./assets/images/image-chess.webp" alt="Chess" class="notification-image">
+        </div>
       </article>
       <article class="notification">
-        <p><strong>Nathan Peterson</strong> reacted to your recent post <strong>5 end-game strategies to increase your win rate</strong></p>
-        <time datetime="P2W">2 weeks ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Nathan Peterson</a></strong> reacted to your recent post <strong class="post-notif"><a href="#">5 end-game strategies to increase your win rate</a></strong></p>
+            <time datetime="P2W">2 weeks ago</time>
+          </div>
+        </div>
       </article>
       <article class="notification">
-        <p><strong>Anna Kim</strong> left the group <strong>Chess Club</strong></p>
-        <time datetime="P2W">2 weeks ago</time>
+        <div class="notification-content">
+          <img src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim" class="avatar">
+          <div class="notification-text">
+            <p><strong><a href="#">Anna Kim</a></strong> left the group <strong><a href="#">Chess Club</a></strong></p>
+            <time datetime="P2W">2 weeks ago</time>
+          </div>
+        </div>
       </article>
     </section>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Therax</a>.
+    Coded by <a target="_blank" href="https://www.github.com/Therax1">Therax</a>.
   </footer>
 </body>
 </html>
