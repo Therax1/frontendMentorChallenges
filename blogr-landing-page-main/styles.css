@@ -1,0 +1,88 @@
+/* Import Section */
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ...ajoutez d'autres styles typographiques ici... */
+:root{
+    /* Primary */
+    --clr-CTA-text: #ff525d;
+    --clr-CTA-hover-background: #ff7a85;
+    --clr-headings: #1f3f5b;
+
+    /* Neutral */
+    --clr-text: #ffffff;
+    --clr-text-footer: #c8c8cb;
+    --clr-body-copy : #4b5862;
+    --clr-footer-background: #25252d;
+
+    /* Gradient */
+        /* Background gradient - Intro/CTA mobile nav */
+            --Very-light-red: #ff8f70;
+            --Light-red: #ff3d54;
+        /* Background gradient - body: */
+            --Very-dark-gray-blue: hsl(237, 17%, 21%); 
+            --Very-dark-desaturated-blue: hsl(237, 23%, 32%); 
+    /* Fonts */
+    --ff-main: 'Overpass', sans-serif;
+    --ff-alt: 'Ubuntu', sans-serif;
+}
+
+/* Reset and Base Styles */
+/* Utilisez cette section pour les styles de réinitialisation et les styles globaux */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+/* Typography */
+/* Définissez les polices, tailles de texte, et styles typographiques */
+body {
+    font-family: 'YourFont', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Layout */
+/* Gérez les conteneurs principaux et la disposition globale */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ...ajoutez d'autres styles de mise en page ici... */
+
+/* Components */
+/* Styles pour les composants spécifiques comme les boutons, cartes, etc. */
+.button {
+    background-color: #ff7a59;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* ...ajoutez d'autres styles de composants ici... */
+
+/* Utilities */
+/* Classes utilitaires pour des ajustements rapides */
+.hidden {
+    display: none !important;
+}
+.text-center {
+    text-align: center;
+}
+/* ...ajoutez d'autres classes utilitaires ici... */
+
+/* Media Queries */
+/* Ajoutez des styles spécifiques pour différentes tailles d'écran */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    /* ...ajoutez d'autres styles responsives ici... */
+}
