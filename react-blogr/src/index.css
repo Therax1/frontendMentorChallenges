@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    /* Primary */
+    --clr-cta-text: #ff525d;
+    --clr-cta-hover-background: #ff7a85;
+    --clr-headings: #1f3f5b;
+
+    /* Neutral */
+    --clr-text: #ffffff;
+    --clr-text-footer: #c8c8cb;
+    --clr-body-copy : #4b5862;
+    --clr-footer-background: #25252d;
+
+    /* Gradient */
+        /* Background gradient - Intro/CTA mobile nav */
+            --clr-very-light-red: #ff8f70;
+            --clr-light-red: #ff3d54;
+        /* Background gradient - body: */
+            --very-dark-gray-blue: hsl(237, 17%, 21%); 
+            --very-dark-desaturated-blue: hsl(237, 23%, 32%); 
+    /* Fonts */
+    --ff-main: 'Overpass', sans-serif;
+    --ff-alt: 'Ubuntu', sans-serif;
+
+    /* Radiux Value */
+    --radius-footer: 105px;
+}
