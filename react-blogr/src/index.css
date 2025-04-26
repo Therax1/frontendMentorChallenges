@@ -16,6 +16,9 @@
 
     /* Gradient */
         /* Background gradient - Intro/CTA mobile nav */
+            --header-image: url('/public/bg-pattern-intro-desktop.svg');
+            --gradient-cta: linear-gradient(90deg, #FF8F70, #FF3E54);
+            --gradient-img: var(--header-image), var(--gradient-cta);
             --clr-very-light-red: #ff8f70;
             --clr-light-red: #ff3d54;
         /* Background gradient - body: */

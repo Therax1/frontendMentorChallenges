@@ -28,7 +28,10 @@ module.exports = {
       },
       borderRadius:{
         'footer': 'var(--radius-footer)',
-      }
+      },
+      backgroundImage: {
+        'cta': 'var(--gradient-img)',
+      },
     },
   },
   plugins: [],
