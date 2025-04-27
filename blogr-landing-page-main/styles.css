@@ -39,6 +39,12 @@ html, body {
     height: 100vh;
 }
 
+body{
+    background-image: url('./images/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, var(--Very-light-red), var(--Light-red));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 -30rem;
+}
 /* Typography */
 /* Définissez les polices, tailles de texte, et styles typographiques */
 body {

@@ -1,6 +1,6 @@
 function Header(){
     return (
-        <header className="header pt-10 pb-24 flex flex-col gap-28 bg-cta rounded-bl-footer text-white">
+        <header className="header pt-10 pb-24 flex flex-col gap-28 bg-cta rounded-bl-footer text-white bg-right-top bg-cover bg-no-repeat">
             <nav className="navbar flex items-center justify-between w-[70%] mx-auto">
                 <div className="title__navlinks flex items-end gap-12">
                     <h1 className="navbar__logo text-3xl font-bold">Blogr</h1>
@@ -12,7 +12,7 @@ function Header(){
                 </div>
                 <div className="login-options flex gap-12">
                     <button className="login-option__login">Login</button>
-                    <button className="login-option__signup">Sign Up</button>
+                    <button className="login-option__signup text-cta-text py-2 px-8 bg-white rounded-3xl font-semibold">Sign Up</button>
                 </div>
             </nav>
 
@@ -22,8 +22,8 @@ function Header(){
                     <p className="cta-title__description">Grow your audience and build your online brand</p>
                 </div>
                 <div className="flex gap-8 mx-auto">
-                    <button className="cta-title__button">Start for Free</button>
-                    <button className="cta-title__button--secondary">Learn More</button>
+                    <button className="cta-title__button text-cta-text py-2 px-6 bg-white rounded-3xl">Start for Free</button>
+                    <button className="cta-title__button--secondary py-2 px-5 border rounded-3xl">Learn More</button>
                 </div>
             </div>
         </header>

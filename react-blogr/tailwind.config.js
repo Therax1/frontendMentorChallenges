@@ -14,14 +14,16 @@ module.exports = {
         },
         headings: 'var(--clr-headings)',
         footer: 'var(--clr-text-footer)',
-        footerBg: 'var(--clr-footer-background)',
         bodycopy: 'var(--clr-body-copy)',
-
         Verylightred: 'var(--clr-very-light-red)',
         lightred: 'var(--clr-light-red)',
-        verydarkgrayblue: 'var(--clr-very-dark-gray-blue)',
-        verydarkdesaturatedblue: 'var(--clr-very-dark-desaturated-blue)',
       },
+      backgroundColor: {
+        darkdesaturatedblue: 'var(--very-dark-desaturated-blue)',
+        darkgrayblue: 'var(--very-dark-gray-blue)',
+        footerBg: 'var(--clr-footer-background)',
+      },  
+
       fontFamily: {
         overpass: ['Overpass', 'sans-serif'],
         ubuntu: ['Ubuntu', 'sans-serif'],
@@ -31,6 +33,7 @@ module.exports = {
       },
       backgroundImage: {
         'cta': 'var(--gradient-img)',
+        'section2': 'var(--gradient-img-sectiontwo)'
       },
     },
   },

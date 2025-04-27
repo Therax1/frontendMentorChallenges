@@ -16,9 +16,10 @@
 
     /* Gradient */
         /* Background gradient - Intro/CTA mobile nav */
-            --header-image: url('/public/bg-pattern-intro-desktop.svg');
-            --gradient-cta: linear-gradient(90deg, #FF8F70, #FF3E54);
-            --gradient-img: var(--header-image), var(--gradient-cta);
+            /* --header-image: url('/public/bg-pattern-intro-desktop.svg'); */
+            
+            --gradient-img: url('/public/assets/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, #FF8F70, #FF3E54);
+            --gradient-img-sectiontwo: url('/public/assets/bg-pattern-circles.svg');
             --clr-very-light-red: #ff8f70;
             --clr-light-red: #ff3d54;
         /* Background gradient - body: */
@@ -29,5 +30,5 @@
     --ff-alt: 'Ubuntu', sans-serif;
 
     /* Radiux Value */
-    --radius-footer: 105px;
+    --radius-footer: 10rem;
 }

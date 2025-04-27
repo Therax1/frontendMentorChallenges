@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="bg-footerBg text-white flex items-center justify-center py-10 px-12 gap-44 font-ubuntu rounded-tr-footer flex-wrap"> 
+    <footer className="bg-footerBg text-white flex items-center justify-center py-10 px-12 gap-44 font-ubuntu rounded-tr-footer flex-wrap"> 
       <div className="self-start">
         <h1 className="text-3xl font-bold">Blogr</h1>
       </div>
@@ -31,7 +31,7 @@ function Footer() {
           <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 }
 
