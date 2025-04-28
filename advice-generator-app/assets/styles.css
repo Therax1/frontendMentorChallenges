@@ -23,10 +23,9 @@ div.quote-card{
     position: relative;
     display: flex;
     justify-content: center;
-    min-width: 12.5em;
+    min-width: 12em;
     max-width: 40em;
     margin: 30px 20px;
-    max-height: 100%;
 }
 
 div.content{
@@ -34,13 +33,12 @@ div.content{
     flex-flow: column wrap;
     align-items: center;
     gap: 30px;
-
 }
 
 p.title{
     color: hsl(150, 100%, 66%);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 1px;
 }   
 

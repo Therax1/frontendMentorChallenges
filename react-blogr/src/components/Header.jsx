@@ -9,7 +9,7 @@ function Header(){
         <header className="header pt-10 pb-24 flex flex-col gap-60 bg-cta bg-[140%] rounded-bl-footer text-white bg-no-repeat h-screen bg-cover">
             <nav className="navbar flex items-center justify-between w-[70%] mx-auto">
                 <div className="title__navlinks flex items-end gap-12">
-                    <a className="navbar__logo">
+                    <a href="#logo" className="navbar__logo">
                         <img 
                             src="/assets/logo.svg"  // Chemin depuis le dossier `public/`
                             alt="" 
