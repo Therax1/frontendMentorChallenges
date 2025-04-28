@@ -1,13 +1,84 @@
+import { useState } from "react";
+
+
 function Header(){
+    const [isOpen, setIsOpen] = useState(null);
+
+
     return (
-        <header className="header pt-10 pb-24 flex flex-col gap-28 bg-cta rounded-bl-footer text-white bg-right-top bg-cover bg-no-repeat">
+        <header className="header pt-10 pb-24 flex flex-col gap-60 bg-cta bg-[120%] rounded-bl-footer text-white bg-no-repeat h-screen bg-cover">
             <nav className="navbar flex items-center justify-between w-[70%] mx-auto">
                 <div className="title__navlinks flex items-end gap-12">
-                    <h1 className="navbar__logo text-3xl font-bold">Blogr</h1>
+                    <a className="navbar__logo">
+                        <img 
+                            src="/assets/logo.svg"  // Chemin depuis le dossier `public/`
+                            alt="" 
+                        />
+                    </a>
                     <ul className="navbar__links flex gap-8">
-                        <li><a href="#home">Product</a></li>
-                        <li><a href="#about">Company</a></li>
-                        <li><a href="#services">Connect</a></li>
+                        <li 
+                            className="relative"
+                            onMouseEnter={() => setIsOpen('product')}
+                            onMouseLeave={() => setIsOpen(null)}
+                        >
+                            <li  className="flex items-center gap-2 cursor-pointer">
+                                <a href="#home">Product</a>
+                                <img src="/assets/icon-arrow-light.svg" alt="" />
+                            </li>
+                            <div className="">
+                                <ul 
+                                    className={`bg-white flex flex-col gap-2 absolute text-headings p-6 rounded-md max-w-[135px] transition-all duration-300
+                                    ${isOpen === 'product' ? 'opacity-100 scale-100' : 'scale-95 opacity-0'}`}
+                                >
+                                    <li className="cursor-pointer hover:font-semibold">Overview</li>
+                                    <li className="cursor-pointer hover:font-semibold">Pricing</li>
+                                    <li className="cursor-pointer hover:font-semibold">Marketplace</li>
+                                    <li className="cursor-pointer hover:font-semibold">Features</li>
+                                    <li className="cursor-pointer hover:font-semibold">Integrations</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li 
+                            className="relative"
+                            onMouseEnter={() => setIsOpen('company')}
+                            onMouseLeave={() => setIsOpen(null)}
+                        >
+                            <li className="flex items-center gap-2 cursor-pointer">
+                                <a href="#about">Company</a>
+                                <img src="/assets/icon-arrow-light.svg" alt="" />
+                            </li>
+                            <div className="">
+                                <ul 
+                                    className={`bg-white flex flex-col gap-2 absolute text-headings p-6 rounded-md max-w-[100px] transition-all duration-300
+                                    ${isOpen === 'company' ? 'opacity-100 scale-100' : 'scale-95 opacity-0'}`}
+                                >
+                                    <li className="cursor-pointer hover:font-semibold">About</li>
+                                    <li className="cursor-pointer hover:font-semibold">Team</li>
+                                    <li className="cursor-pointer hover:font-semibold">Blog</li>
+                                    <li className="cursor-pointer hover:font-semibold">Careers</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li 
+                            className="relative"
+                            onMouseEnter={() => setIsOpen('connect')}
+                            onMouseLeave={() => setIsOpen(null)}
+                        >
+                            <li className="flex items-center gap-2 cursor-pointer">
+                                <a href="#services">Connect</a>
+                                <img src="/assets/icon-arrow-light.svg" alt="" />
+                            </li>
+                            <div className="">
+                                <ul 
+                                    className={`bg-white flex flex-col gap-2 absolute text-headings p-6 rounded-md max-w-[123px] transition-all duration-300
+                                    ${isOpen === 'connect' ? 'opacity-100 scale-100' : 'scale-95 opacity-0'}`}
+                                >
+                                    <li className="cursor-pointer hover:font-semibold">Contact</li>
+                                    <li className="cursor-pointer hover:font-semibold">Newsletter</li>
+                                    <li className="cursor-pointer hover:font-semibold">LinkedIn</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className="login-options flex gap-12">

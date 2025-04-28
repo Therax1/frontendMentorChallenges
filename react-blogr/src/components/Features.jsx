@@ -3,8 +3,8 @@ import React from 'react';
 function Features() {
     return(
         <main className='mx-auto py-24 flex flex-col gap-16'>
-            <section className="w-[70%] text-bodycopy flex flex-col gap-16 mx-auto">
-                <h2 className='text-3xl text-center font-semibold'>Designed for the future</h2>
+            <h2 className='text-3xl text-center font-semibold'>Designed for the future</h2>
+            <section className="w-[70%] text-bodycopy flex flex-col gap-16">
                 <div className="flex gap-4 w-full">
                     <div className="w-[50%] flex flex-col gap-12">
                         <div className="flex flex-col gap-4">
@@ -25,11 +25,11 @@ function Features() {
                         </div>
                     </div>
                     
-                    <div className="w-[50%] relative">
+                    <div className="">
                         <img 
                             src="/assets/illustration-editor-desktop.svg"  // Chemin depuis le dossier `public/`
                             alt="Description"
-                            className="relative h-96 w-96 object-cover -right-16"
+                            className="w-[1000px]"
                         />
                     </div>
                 </div>

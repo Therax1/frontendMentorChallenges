@@ -18,7 +18,7 @@
         /* Background gradient - Intro/CTA mobile nav */
             /* --header-image: url('/public/bg-pattern-intro-desktop.svg'); */
             
-            --gradient-img: url('/public/assets/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, #FF8F70, #FF3E54);
+            --gradient-img: url('/public/assets/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, #FF3E54, #ff525d);
             --gradient-img-sectiontwo: url('/public/assets/bg-pattern-circles.svg');
             --clr-very-light-red: #ff8f70;
             --clr-light-red: #ff3d54;
@@ -30,5 +30,5 @@
     --ff-alt: 'Ubuntu', sans-serif;
 
     /* Radiux Value */
-    --radius-footer: 10rem;
+    --radius-footer: 4rem;
 }
