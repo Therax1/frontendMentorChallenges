@@ -1,0 +1,33 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Resets */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root{
+    /* Fonts and text variables  */
+    --ff-main: 'Figtree', sans-serif;
+    --fs-main: 16px;
+    --fw-500: 500;
+    --fw-800: 800;
+
+    /* Responsive Width */
+    --mobile-size: 320px;
+    --one-destop-size: 1440px;
+    --my-desktop-size: 1920px;
+
+    /* Colors */
+    --bg-main:#f4d04e;
+
+    --bg-card: #ffffff;
+    
+    --gray-500: #6b6b6b;
+    --gray-900: #121212;
+}
