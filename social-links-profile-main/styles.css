@@ -1,0 +1,131 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Variables */
+
+:root{
+    /* Fonts and text */
+    --ff-main: 'Inter', sans-serif;
+    --fs-main: 14px;
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    /* Responsive Screens */
+    --screen-sm: 320px;
+    --screen-lg: 1440px;
+    --screen-xl: 1920px;
+
+    /* Colors */
+    --location: #c5f82a;
+    --text: #ffffff;
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+/* Containers */
+body{
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    background-color: var(--grey-900);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.1rem;
+    font-weight: var(--fw-400);
+}
+
+/* UI components */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-800);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    width: 100%;
+    gap: 1.3rem;
+    max-width: 390px;
+}
+
+    /* User Picture */
+.card__image-container img  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+    /* User Infos [Name, Location] */
+.infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.userName{
+    color: var(--text);
+    font-size: 1.57rem;
+    font-weight: var(--fw-700);
+}
+
+.location{
+    color: var(--location);
+    font-weight: var(--fw-700);
+}
+    /* User Description */
+.desription{
+    color: var(--text);
+    font-size: 0.94rem;
+    text-align: center;
+}
+
+    /* User Socials Links*/
+.card__socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card__socials > *{
+    background-color: var(--grey-700);
+    width: 100%;
+    padding: 0.9rem 0.5rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    font-weight: var(--fw-700);
+    transition: 0.3s;
+}
+
+.card__socials > *:hover{
+    background-color: var(--location);
+    color: var(--grey-900);
+}
+
+/* No need of Media Queries Already responsive */
