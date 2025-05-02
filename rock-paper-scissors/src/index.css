@@ -11,31 +11,31 @@
 /* Variables */
 
 :root{
-    /* Text && Fonts */
-    --ff: "Barlow Semi Condensed", sans-serif;
-    --fw-600: 600;
-    --fw-700: 700;
+  /* Text && Fonts */
+  --ff: "Barlow Semi Condensed", sans-serif;
+  --fw-600: 600;
+  --fw-700: 700;
 
-    /* Screen Sizes */
+  /* Screen Sizes */
 
-    --sm: 320px;
-    --md: 375px;
-    --lg: 1366px;
-    --main: 1920px;
+  --sm: 320px;
+  --md: 375px;
+  --lg: 1366px;
+  --main: 1920px;
 
-    /* Colors */
+  /* Colors */
 
-    --scissor: linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
-    --paper: linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
-    --rock: linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
-    --lizard: linear-gradient(hsl(261, 73%, 60%) to hsl(261, 70%, 63%));
-    --spock: linear-gradient(hsl(189, 59%, 53%) to hsl(189, 58%, 57%));
+  --scissor: linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
+  --paper: linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
+  --rock: linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
+  --lizard: linear-gradient(hsl(261, 73%, 60%) to hsl(261, 70%, 63%));
+  --spock: linear-gradient(hsl(189, 59%, 53%) to hsl(189, 58%, 57%));
 
-    --text-dark: hsl(229, 25%, 31%);
-    --text-score: hsl(229, 64%, 46%);
-    --outline-header: hsl(217, 16%, 45%);
+  --text-dark: hsl(229, 25%, 31%);
+  --text-score: hsl(229, 64%, 46%);
+  --outline-header: hsl(217, 16%, 45%);
 
-    --bg-main: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --bg-main: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
 /* Containers */
@@ -47,7 +47,8 @@
   background: var(--bg-main);
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: #FFF;
 }
 
@@ -76,7 +77,7 @@ header{
 }
 
 .score{
-  padding: 0.8rem 2.3rem;
+  padding: 0.5rem 2.3rem;
   height: 100%;
   background-color: #FFF;
   border-radius: 0.3rem;
@@ -96,5 +97,41 @@ header{
   font-size: 3rem;
   font-weight: var(--fw-700);
   color: var(--text-dark);
+}
 
+/* Game Design */
+
+.game{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'paper  scissors'
+  'rock rock';
+  place-items: center;
+  height: 30rem;
+  padding-top: 4rem;
+  width: 30rem;
+}
+
+
+/* Grid Area Declaration */
+.game__choicebtn{
+  border-radius: 50%;
+  height: 10rem; 
+  width: 10rem;
+  cursor: pointer;
+  outline: none;
+}
+.game__choicebtn[data-choice="paper"]{
+  grid-area: paper;
+  border: 20px solid var(--paper);
+}
+.game__choicebtn[data-choice="scissors"]{
+  grid-area: scissors;
+  border: 20px solid var(--scissor);
+}
+.game__choicebtn[data-choice="rock"]{
+  border: 20px solid var(--rock);
+  grid-area: rock;
 }

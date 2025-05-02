@@ -1,6 +1,7 @@
 import React from 'react';
 import '../index.css';
-import Header from '../components/header';
+import Header from '../components/Header';
+import Game from '../components/Game';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
   return(
     <div className="container">
       <Header />
+        <Game />
     </div>
   );
 }
