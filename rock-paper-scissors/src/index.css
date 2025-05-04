@@ -25,11 +25,11 @@
 
   /* Colors */
 
-  --scissor: linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
-  --paper: linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
-  --rock: linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
-  --lizard: linear-gradient(hsl(261, 73%, 60%) to hsl(261, 70%, 63%));
-  --spock: linear-gradient(hsl(189, 59%, 53%) to hsl(189, 58%, 57%));
+  --scissor: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paper: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rock: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --lizard: linear-gradient(hsl(261, 73%, 60%), hsl(261, 70%, 63%));
+  --spock: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
 
   --text-dark: hsl(229, 25%, 31%);
   --text-score: hsl(229, 64%, 46%);
@@ -114,24 +114,38 @@ header{
   width: 30rem;
 }
 
-
-/* Grid Area Declaration */
 .game__choicebtn{
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 50%;
+  box-shadow: inset 0px -5px 13px #000;
+}
+
+.choice{
   border-radius: 50%;
   height: 10rem; 
   width: 10rem;
-  cursor: pointer;
-  outline: none;
+  display: grid;
+  background-color: #fff;
+  place-items: center;
+  overflow: hidden;
 }
+
+
+
+/* Grid Area Declaration */
 .game__choicebtn[data-choice="paper"]{
   grid-area: paper;
-  border: 20px solid var(--paper);
+  background: var(--paper);
 }
+
 .game__choicebtn[data-choice="scissors"]{
   grid-area: scissors;
-  border: 20px solid var(--scissor);
+  background: var(--scissor);
+
 }
 .game__choicebtn[data-choice="rock"]{
-  border: 20px solid var(--rock);
   grid-area: rock;
+  background: var(--rock);
 }
