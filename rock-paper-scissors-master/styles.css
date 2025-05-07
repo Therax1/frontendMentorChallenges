@@ -1,0 +1,235 @@
+/* Import Fonnts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+/* Resets */
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root{
+  /* Text && Fonts */
+  --ff: "Barlow Semi Condensed", sans-serif;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* Screen Sizes */
+
+  --sm: 320px;
+  --md: 375px;
+  --lg: 1366px;
+  --main: 1920px;
+
+  /* Colors */
+
+  --scissor: linear-gradient(to bottom left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paper: linear-gradient(to bottom left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rock: linear-gradient(to bottom left,hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --lizard: linear-gradient(hsl(261, 73%, 60%), hsl(261, 70%, 63%));
+  --spock: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+  --text-dark: hsl(229, 25%, 31%);
+  --text-score: hsl(229, 64%, 46%);
+  --outline-header: hsl(217, 16%, 45%);
+
+  --bg-main: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  --text-white: #FFF;
+  /* Shadows */
+  --shadow-light: rgba(0, 0, 0, 0.141);
+  --shadow-med: rgba(0, 0, 0, 0.302);
+}
+
+/* Containers */
+
+.container{
+  padding: 1.4rem;
+  font-family: var(--ff);
+  font-weight: var(--fw-600);
+  background: var(--bg-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFF;
+}
+
+/* UI Components */
+
+/* Header design */
+header{
+  outline: 1px solid var(--outline-header);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 33rem;
+  max-height: 7rem;
+  border-radius: 0.5rem;
+}
+
+.title{
+  line-height: 29px;
+  font-size: 37px;
+  font-weight: var(--fw-700);
+}
+
+.score-container{
+  height: 100%;
+}
+
+.score{
+  padding: 0.5rem 2.3rem;
+  height: 100%;
+  background-color: #FFF;
+  border-radius: 0.3rem;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.score-label{
+  color: var(--text-score);
+  font-size: 17px;
+}
+
+.current-score{
+  font-size: 3rem;
+  font-weight: var(--fw-700);
+  color: var(--text-dark);
+}
+
+/* Game Design */
+
+.game{
+  position: relative;
+  display: grid;
+  gap: 5rem;
+  column-gap: 10rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'paper  scissors'
+  'rock rock';
+  place-items: center;
+  height: 30rem;
+  padding-top: 4rem;
+  width: 30rem;
+  z-index: 3;
+}
+
+.game::before{
+  content: '';
+  position: absolute;
+  top: 23%;
+  left: 18%;
+  height: 100%;
+  width: 100%;
+  background: url('./images/bg-triangle.svg') no-repeat;
+  z-index: -1;
+}
+
+.game__choicebtn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.choice{
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  box-shadow: inset 0 0.5rem var(--shadow-light);
+}
+
+/* Choice Image */
+.choice img{
+  transform: scale(1.25);
+}
+
+
+.choice::before,
+.choice::after{
+  content: '';
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: -15%;
+  left: -15%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.choice::after {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.game__choicebtn:focus .choice::after{
+  opacity: 1;
+  box-shadow: 0 0 0 2rem #223351;
+  z-index: -2;
+}
+
+
+/* Border Personalization 
+With the background Linear Gradient
+*/
+.choice.paper::before {
+  background: var(--paper);
+  box-shadow: 0 0.5rem var(--shadow-med),  0 0.5rem hsl(230, 89%, 62%);
+}
+
+.choice.scissors::before{
+  background: var(--scissor);
+  box-shadow: 0 0.5rem var(--shadow-med),  0 0.5rem hsl(39, 89%, 49%);
+}
+
+.choice.rock::before{
+  background: var(--rock);
+  box-shadow: 0 0.5rem var(--shadow-med),  0 0.5rem hsl(349, 71%, 52%);
+}
+
+
+/* Grid Area Declaration */
+.game__choicebtn[data-choice="paper"]{
+  grid-area: paper;
+  /* background: var(--paper); */
+}
+
+.game__choicebtn[data-choice="scissors"]{
+  grid-area: scissors;
+  /* background: var(--scissor); */
+}
+.game__choicebtn[data-choice="rock"]{
+  grid-area: rock;
+  /* background: var(--rock); */
+}
+
+/* Rules Button design */
+.rules-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: none;
+  outline: none;
+  border: 2px solid var(--outline-header);
+  border-radius: 0.6rem;
+  color: var(--text-white);
+  padding: 0.6rem 2.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.rules-btn:focus {
+  border: 2px solid #fff;
+}

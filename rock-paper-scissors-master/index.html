@@ -5,33 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="root">
+    <div class="container">
+      <header class="header">
+        <div class="">
+            <h2 class="title">
+                ROCK <br />PAPER <br />SCISSORS
+            </h2>
+        </div>
+        <div class="score-container">
+            <div class="score">
+                <h5 class="score-label">SCORE</h5>
+                <h2 class="current-score">12</h2>
+            </div>
+        </div>
+      </header>
+      <section class="game">
+        <button class="game__choicebtn" data-choice="paper">
+             <div class="choice paper">
+                 <img src="./images/icon-paper.svg" alt="Paper Icon" />
+             </div>
+        </button>
+        <button class="game__choicebtn" data-choice="scissors">
+             <div class="choice scissors">
+                 <img src="./images/icon-scissors.svg" alt="Scissors Icon" />
+             </div>
+        </button>
+        <button class="game__choicebtn" data-choice="rock">
+             <div class="choice rock">
+                 <img src="./images/icon-rock.svg" alt="Rock Icon" />
+             </div>
+        </button>
+     </section>
+    </div>
+    <button class="rules-btn">RULES</button>
   </div>
 </body>
 </html>
