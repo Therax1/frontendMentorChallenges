@@ -125,7 +125,7 @@ header.header{
   height: 30rem;
   padding-top: 4rem;
   width: 30rem;
-  z-index: 3;
+  z-index: 10;
 }
 
 .game::before{
@@ -136,7 +136,7 @@ header.header{
   height: 100%;
   width: 100%;
   background: url('./images/bg-triangle.svg') no-repeat;
-  z-index: -1;
+  z-index: -5;
 }
 
 .game__choicebtn{
@@ -172,7 +172,7 @@ header.header{
   top: -15%;
   left: -15%;
   border-radius: 50%;
-  z-index: -1;
+  z-index: -5;
 }
 
 .choice::after {
@@ -183,7 +183,7 @@ header.header{
 .game__choicebtn:focus .choice::after{
   opacity: 1;
   box-shadow: 0 0 0 2rem #223351;
-  z-index: -2;
+  z-index: -5;
 }
 
 
@@ -290,6 +290,7 @@ With the background Linear Gradient
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
+  column-gap: 3rem;
   grid-template-areas:
     "you-title ai-title"
     "you-picked ai-picked";
@@ -322,7 +323,7 @@ With the background Linear Gradient
   background: #16213d;
   border-radius: 50%;
   transform: scale(1.4);
-  z-index: -1;
+  z-index: 1;
 }
 
 
@@ -333,10 +334,10 @@ With the background Linear Gradient
     "you-picked result-winner ai-picked";
 }
 
-.winner .choice::after {
+/* .winner .choice::after {
   box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
-  animation: winner 1s ease forwards;
-}
+  animation: winner 0.5s ease forwards;
+} */
 
 @keyframes winner {
   from {
@@ -363,12 +364,11 @@ With the background Linear Gradient
   border-radius: 0.6rem;
   color: var(--dark-text);
   padding: 0.6rem 3.5rem;
-  font-family: inherit;
   text-transform: inherit;
   font-size: 1.3rem;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
 .play-again:focus {
-  border: 2px solid var(--outline);
+  border: 2px solid var(--outline-header);
 }
